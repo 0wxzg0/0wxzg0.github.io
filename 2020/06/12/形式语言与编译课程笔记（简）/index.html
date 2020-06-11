@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>形式语言与编译课程笔记（简） | 無限のゴミ箱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="考前一天赶制的东西，根据老师给的考试范围ppt汇总，有没有用不知道，我只肯定我依然考的稀烂内容主要来自ppt和教材《自动机理论、语言和计算导论》、&amp;lt;程序设计语言 编译原理&amp;gt;    形式语言 第一章 绪论 第二、三、七章 有穷自动机 第四章 正则表达式 第五、六章 正则语言 第八章 CFL 第九章 范式 第十、十一章 PDA   编译原理 第一章 编译绪论 第三章 词法分析 第四章 自上">
+<meta name="keywords" content="学校,编译原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="形式语言与编译课程笔记（简）">
+<meta property="og:url" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/index.html">
+<meta property="og:site_name" content="無限のゴミ箱">
+<meta property="og:description" content="考前一天赶制的东西，根据老师给的考试范围ppt汇总，有没有用不知道，我只肯定我依然考的稀烂内容主要来自ppt和教材《自动机理论、语言和计算导论》、&amp;lt;程序设计语言 编译原理&amp;gt;    形式语言 第一章 绪论 第二、三、七章 有穷自动机 第四章 正则表达式 第五、六章 正则语言 第八章 CFL 第九章 范式 第十、十一章 PDA   编译原理 第一章 编译绪论 第三章 词法分析 第四章 自上">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p1.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p2.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p3.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p4.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p10.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p5.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p6.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p7.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p9.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p11.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p12.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p13.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p14.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p15.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p16.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p17.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p18.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p19.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p20.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p21.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p22.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p25.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p26.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p23.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p24.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p27.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p28.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p29.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p30.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p31.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p32.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p33.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p35.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p34.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p36.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p37.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p38.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p40.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p41.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p43.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p39.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p42.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p44.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p45.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p46.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p47.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p57.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p56.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p58.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p59.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p60.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p61.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p48.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p49.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p64.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p65.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p51.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p52.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p53.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p54.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p55.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p50.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p61.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p62.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p63.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p66.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p67.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p68.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p69.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p70.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p71.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p72.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p73.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p74.png">
+<meta property="og:updated_time" content="2020-06-11T17:02:02.272Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="形式语言与编译课程笔记（简）">
+<meta name="twitter:description" content="考前一天赶制的东西，根据老师给的考试范围ppt汇总，有没有用不知道，我只肯定我依然考的稀烂内容主要来自ppt和教材《自动机理论、语言和计算导论》、&amp;lt;程序设计语言 编译原理&amp;gt;    形式语言 第一章 绪论 第二、三、七章 有穷自动机 第四章 正则表达式 第五、六章 正则语言 第八章 CFL 第九章 范式 第十、十一章 PDA   编译原理 第一章 编译绪论 第三章 词法分析 第四章 自上">
+<meta name="twitter:image" content="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="無限のゴミ箱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">無限のゴミ箱</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://0wxzg0.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-形式语言与编译课程笔记（简）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/12/形式语言与编译课程笔记（简）/" class="article-date">
+  <time datetime="2020-06-11T16:47:12.000Z" itemprop="datePublished">2020-06-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      形式语言与编译课程笔记（简）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+		<p>考前一天赶制的东西，根据老师给的考试范围ppt汇总，有没有用不知道，我只肯定我依然考的稀烂<br>内容主要来自ppt和教材<a href="https://book.douban.com/subject/3171389/" target="_blank" rel="noopener">《自动机理论、语言和计算导论》</a>、<a href="https://book.douban.com/subject/1231706/" target="_blank" rel="noopener">&lt;程序设计语言 编译原理&gt;</a></p>
+<!-- toc -->
+
+<ul>
+<li><a href="#形式语言">形式语言</a><ul>
+<li><a href="#第一章-绪论">第一章 绪论</a></li>
+<li><a href="#第二-三-七章-有穷自动机">第二、三、七章 有穷自动机</a></li>
+<li><a href="#第四章-正则表达式">第四章 正则表达式</a></li>
+<li><a href="#第五-六章-正则语言">第五、六章 正则语言</a></li>
+<li><a href="#第八章-cfl">第八章 CFL</a></li>
+<li><a href="#第九章-范式">第九章 范式</a></li>
+<li><a href="#第十-十一章-pda">第十、十一章 PDA</a></li>
+</ul>
+</li>
+<li><a href="#编译原理">编译原理</a><ul>
+<li><a href="#第一章-编译绪论">第一章 编译绪论</a></li>
+<li><a href="#第三章-词法分析">第三章 词法分析</a></li>
+<li><a href="#第四章-自上而下的语法分析">第四章 自上而下的语法分析</a></li>
+<li><a href="#第五章-自下而上分析">第五章 自下而上分析</a></li>
+<li><a href="#第六章-属性文法">第六章 属性文法</a></li>
+<li><a href="#第七章-语义分析和中间代码生成">第七章 语义分析和中间代码生成</a></li>
+<li><a href="#第八章-符号表">第八章 符号表</a></li>
+<li><a href="#第九章-运行时存储空间组织">第九章 运行时存储空间组织</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<a id="more"></a>
+
+<h1><span id="形式语言">形式语言</span></h1><ul>
+<li>DFA：确定型有穷自动机</li>
+<li>NFA：非确定型有穷自动机</li>
+<li>CFL：上下文无关语言</li>
+<li>CFG：上下文无关文法</li>
+<li>PDA：下推自动机</li>
+</ul>
+<h2><span id="第一章-绪论">第一章 绪论</span></h2><ul>
+<li>字母表∑：符号的有穷集合</li>
+<li>符号串：∑上符号串（∑中符号的有穷序列），∑*中元素</li>
+<li>语言：∑上语言（串的集合），∑*的子集</li>
+<li>符号串运算：连接、并、闭包</li>
+<li>语言上的运算：连接、并、闭包</li>
+</ul>
+<h2><span id="第二-三-七章-有穷自动机">第二、三、七章 有穷自动机</span></h2><ul>
+<li>三种表示：状态图、代数五元组(Q,∑,δ,q0.F)（含迁移函数δ）、迁移表<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p1.png" alt></li>
+<li>自动机如何接受串：开始状态到结束状态的路径</li>
+<li>扩展迁移函数<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p2.png" alt></li>
+<li>NFA（包括ε-NFA）转换为DFA：子集法，DFA的状态用集合表示<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p3.png" alt></li>
+<li>求状态的ε-闭包，求状态集合的ε-闭包<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p4.png" alt></li>
+<li>DFA最小化：两个状态是可区分的、不可区分的（也称等价的）<br>闭包<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p10.png" alt></li>
+<li>语言的DFA定义和NFA定义：给定语言写出DFA或NFA(若A是一个自动机,则L(A)是它定义的语言)</li>
+</ul>
+<h2><span id="第四章-正则表达式">第四章 正则表达式</span></h2><ul>
+<li>最基本的正则表达式</li>
+<li>正则表达式的三种运算：连接、并、闭包<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p5.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p6.png" alt></li>
+<li>正则表达式定义的语言：L(a)={a},L(r+s)=L(r)∪L(s)</li>
+<li>语言的正则表达式定义：给出语言写出正则表达式<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p7.png" alt></li>
+</ul>
+<h2><span id="第五-六章-正则语言">第五、六章 正则语言</span></h2><ul>
+<li>泵引理<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p9.png" alt></li>
+</ul>
+<h2><span id="第八章-cfl">第八章 CFL</span></h2><ul>
+<li>上下文无关文法CFG G=(V,T,P,S)<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p11.png" alt></li>
+<li>产生式、变元、候选式</li>
+<li>文法定义语言L(G)={w⇒T<em>| S⇒</em>w}</li>
+<li>推导、最左推导(⇒<sub>lm</sub>)、最右推导(⇒<sub>rm</sub>)</li>
+<li>归约</li>
+<li>语法树，产物<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p12.png" alt></li>
+<li>推导、归约与语法树对应关系</li>
+<li>了解如何判定是歧义文法<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p13.png" alt></li>
+</ul>
+<h2><span id="第九章-范式">第九章 范式</span></h2><ul>
+<li>有/无产出变元、可达/不可达符号、可空变元、单位产生式</li>
+<li>消除无产出符号</li>
+<li>消除不可达符号</li>
+<li>消除ε-产生式</li>
+<li>消除单位产生式<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p14.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p15.png" alt></li>
+</ul>
+<h2><span id="第十-十一章-pda">第十、十一章 PDA</span></h2><ul>
+<li>PDA的代数定义（含迁移函数）、迁移图定义<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p16.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p17.png" alt></li>
+<li>PDA的移动、瞬时描述<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p18.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p19.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p20.png" alt><br>输入串消耗完→状态结束</li>
+<li>PDA以空栈方式接受串、以结束状态方式接受串<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p21.png" alt="以终结状态方式接受"><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p22.png" alt="以空栈方式接受"><br>（将最后一步迁移方式改为Z<sub>0</sub>出栈）</li>
+<li>了解以上的PDA基本组成</li>
+</ul>
+<h1><span id="编译原理">编译原理</span></h1><h2><span id="第一章-编译绪论">第一章 编译绪论</span></h2><ul>
+<li>编译过程：阶段性（五个）<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p25.png" alt></li>
+<li>编译器结构：前端后端<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p26.png" alt><br>前端：词法、语法、中间代码<br>后端：目标代码</li>
+<li>编译器的作用：从三个程序相关程序去理解</li>
+</ul>
+<h2><span id="第三章-词法分析">第三章 词法分析</span></h2><ul>
+<li>词法分析器设计：单词符号（token）设计：一符一种、全体一种<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p23.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p24.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p27.png" alt></li>
+</ul>
+<h2><span id="第四章-自上而下的语法分析">第四章 自上而下的语法分析</span></h2><ul>
+<li>分析过程有回溯和死循环的原因</li>
+<li>消除左递归：运用代入法</li>
+<li>消除回溯：提取公共前缀<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p28.png" alt></li>
+<li>计算FIRST集和FOLLOW集<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p29.png" alt="FIRST集"><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p30.png" alt="FOLLOW集"></li>
+<li>判断LL(1)文法<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p31.png" alt></li>
+<li>构造预测分析表<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p32.png" alt></li>
+</ul>
+<h2><span id="第五章-自下而上分析">第五章 自下而上分析</span></h2><ul>
+<li>项目集、增广文法<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p33.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p35.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p34.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p36.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p37.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p38.png" alt><br>增广文法：S’→S（起始状态）</li>
+<li>构造识别活前缀的DFA：直接构造法<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p40.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p41.png" alt></li>
+<li>归约-归约冲突及移进-归约冲突及其消解<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p43.png" alt></li>
+<li>句柄、直接短语、短语</li>
+<li>LR(0)和SLR(1)概念<br>L：从左向右扫描序列<br>R：最右推导<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p39.png" alt><br>LR(0)分析表：<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p42.png" alt><br>SLR分析表：<br>步骤2需判断a∈FOLLOW(A)才能用A→a归约<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p44.png" alt></li>
+</ul>
+<h2><span id="第六章-属性文法">第六章 属性文法</span></h2><ul>
+<li>属性、全局变量<br>属性举例：变量的类型；表达式的值；变量在存储器中的位置；过程目标代码；数中有效位数。</li>
+<li>属性方程、过程调用<br>p : X→X<sub>1</sub>…X<sub>n</sub><br>属性方程：{ p[i].a<sub>j</sub> = f<sub>ij</sub>(p[0].a<sub>1</sub>,…,p[0].a<sub>k</sub>, p[1].a<sub>1</sub>,…, p[1].a<sub>k</sub>,…, p[n].a<sub>1</sub>,…, p[n].a<sub>k</sub>) }</li>
+<li>继承属性与综合属性<br>综合属性（自下而上），继承属性（自上而下）</li>
+<li>语法制导的翻译框架（原理）<br>在语法分析过程中，随着分析的步步进展，根据每个产生式所对应的语义子程序（语义动作）进行翻译（产生中间代码）的办法。</li>
+</ul>
+<h2><span id="第七章-语义分析和中间代码生成">第七章 语义分析和中间代码生成</span></h2><ul>
+<li>中间表示</li>
+<li><em>三地址代码：*</em><br>(1)x:=y op z<br>(2)x:=op y（负：uminus）<br>(3)x:=y<br>(4)(if a relop y) goto L<br>(5)x:=y[i]<br>(6)x:=&amp;y<br>(7)param x；call p,n（过程调用）<br>(8)return y</li>
+<li><em>四元式与三元式：*</em><br>a:=b * -c + b * -c<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p45.png" alt></li>
+<li><em>间接三元式*</em><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p46.png" alt></li>
+<li><em>语义变量和过程*</em><br><u>NEWTEMP</u>:函数过程。每次调用时，它都回送一个代表新临时变量名的整数码作为函数值。<br><u>ENTRY(i)</u>:函数过程<br><u>E.PLACE</u>:和非终结符E相联系的语义变量，表示存放E值的变量名在符号表的入口或者整数码（若为临时变量）。<br><u>GEN(OP,ARG1,ARG2,RESULT)</u>:语义过程，把四元式(OP,ARG1,ARG2,RESULT)填入四元式表。</li>
+<li>说明语句翻译<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p47.png" alt></li>
+<li>布尔表达式翻译</li>
+<li><em>数值表达式：*</em><br>翻译模式<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p57.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p56.png" alt><br>语义规则<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p58.png" alt></li>
+<li><em>条件控制：*</em><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p59.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p60.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p61.png" alt></li>
+<li>赋值语句翻译<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p48.png" alt></li>
+<li><em>数组：*</em><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p49.png" alt><br>举例：<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p64.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p65.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p51.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p52.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p53.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p54.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p55.png" alt></li>
+<li><em>类型转换：*</em><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p50.png" alt></li>
+<li>if、while语句翻译<br>属性文法<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p61.png" alt><br>翻译模式<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p62.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p63.png" alt></li>
+<li>过程调用语句翻译<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p66.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p67.png" alt></li>
+</ul>
+<h2><span id="第八章-符号表">第八章 符号表</span></h2><ul>
+<li>符号表的内容及作用：存放程序中名字的信息（内情向量表、标识符（名字）信息）<br>内情向量表：存放数组信息（界差，上界-下界）<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p68.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p69.png" alt></li>
+</ul>
+<h2><span id="第九章-运行时存储空间组织">第九章 运行时存储空间组织</span></h2><ul>
+<li>运行时存储空间划分（一维线性地址，默认数据类型大小都为1）：静态区（含代码区），栈区，堆区</li>
+<li><em>存储空间划分*</em><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p70.png" alt><br>栈、堆：动态<br>push操作栈指针（sp）-1；pop操作sp+1</li>
+<li>过程的活动及活动树<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p71.png" alt></li>
+<li>活动记录的布局与调用返回指令序列</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">序号大→小</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">实在参数区</td>
+</tr>
+<tr>
+<td align="left">访问链（直接外层）</td>
+</tr>
+<tr>
+<td align="left">控制链/<strong>fp</strong>（调用方）</td>
+</tr>
+<tr>
+<td align="left">返回地址</td>
+</tr>
+<tr>
+<td align="left">局部数据区</td>
+</tr>
+<tr>
+<td align="left">临时变量区←sp（栈指针）</td>
+</tr>
+</tbody></table>
+<p><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p72.png" alt></p>
+<ul>
+<li>简单栈式存储分配<ul>
+<li>没有分程序结构；</li>
+<li>过程定义不允许嵌套；</li>
+<li>允许过程递归调用；</li>
+<li>允许过程含有可变数组(但不允许全局可变数组)</li>
+<li>参数传递：<br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p73.png" alt><br><img src="//0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/p74.png" alt></li>
+</ul>
+</li>
+<li>访问链的构建</li>
+<li>过程作为参数的处理</li>
+<li>超长实参的处理</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/" data-id="ckbb156a7000ijcvxybgio60c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编译原理/">编译原理</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/11/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/お笑い/">お笑い</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学校/">学校</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/废纸篓/">废纸篓</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译原理/">编译原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/お笑い/" style="font-size: 10px;">お笑い</a> <a href="/tags/学校/" style="font-size: 20px;">学校</a> <a href="/tags/废纸篓/" style="font-size: 20px;">废纸篓</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/日常/" style="font-size: 10px;">日常</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/编译原理/" style="font-size: 10px;">编译原理</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/12/形式语言与编译课程笔记（简）/">形式语言与编译课程笔记（简）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/11/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/02/galgame攻略记录/">galgame攻略记录</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/电路编程/">电路编程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/10/Huffman编码/">Huffman编码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 0wxzg0<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
