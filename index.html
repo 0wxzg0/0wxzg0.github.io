@@ -84,305 +84,125 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-		<h2><span id="掌握学习过的几个模型">掌握学习过的几个模型</span></h2><h3><span id="0数学模型的定义一般步骤">0.数学模型的定义，一般步骤</span></h3><ul>
-<li>数学模型：以解决某个<strong>现实问题</strong>为目的，经过<strong>分析简化</strong>，从中<strong>抽象、归纳</strong>出来的数学问腿就是该问题的数学模型，这个过程称为数学建模。数学模型主要指用字母、数字和其它数学符号组成的关系式、图表、框图等描述<strong>现实对象的数量特征及其内在联系</strong>的一种模型。</li>
-<li>一般步骤<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/01.png" alt="数学建模一般步骤"></li>
-</ul>
-<h3><span id="1放射性废物处理">1.放射性废物处理</span></h3><p><strong>处理方式是否安全的关键</strong></p>
-<p>处理浓缩放射性废物：将废物放入密封性很好的圆桶中，扔入水中300英尺。圆桶是否破裂。</p>
-<h4><span id="问题关键">问题关键</span></h4><ul>
-<li>圆桶能承受多大速度的碰撞</li>
-<li>圆桶和海底碰撞速度大小</li>
-</ul>
-<h4><span id="准备">准备</span></h4><ul>
-<li>能承受最大速度</li>
-<li>圆桶重量W</li>
-<li>海水浮力B（常数），阻力D（D=Cv）</li>
-</ul>
-<h4><span id="分析">分析</span></h4><ul>
-<li>求下落速度函数v(t)<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/13.png" alt="下落位移与速度"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/14.png" alt="最大速度"></li>
-<li>不易求出沉入海底需要时间t，转而求函数<strong>v=v(y)或y=y(v)</strong><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/15.png" alt="v=v(y)"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/16.png" alt="y=y(v)"></li>
-</ul>
-<h3><span id="2人口预测">2.人口预测</span></h3><p><strong>几个具体模型（假设内容、参数意义、区别）</strong></p>
-<h4><span id="马尔萨斯模型">马尔萨斯模型</span></h4><h5><span id="假设">假设</span></h5><p>人口相对增长率r为<strong>常数</strong></p>
-<h5><span id="模型建立">模型建立</span></h5><ul>
-<li>参数：<ul>
-<li>t：时间</li>
-<li>P(t)：t时刻的人口总数</li>
-<li>r：人口自然增长率（净增长率）</li>
-</ul>
-</li>
-<li>列函数式<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/22.png" alt="函数式"></li>
-</ul>
-<h5><span id="结论">结论</span></h5><p>人口数量是时间变量的<strong>指数函数</strong></p>
-<h4><span id="logistic模型">Logistic模型</span></h4><h5><span id="假设">假设</span></h5><p>在Logistic模型中，认为人口自然增长率r始终为常数是不合理的。考虑r的变化，<strong>将r定义为t的函数</strong></p>
-<h5><span id="模型建立">模型建立</span></h5><ul>
-<li>参数：<ul>
-<li>t：时间</li>
-<li>P(t)：t时刻的人口总数</li>
-<li>r(t)：人口自然增长率（净增长率）</li>
-<li>K：地球最多能够支撑的人口数量</li>
-</ul>
-</li>
-<li>列函数式<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/23.png" alt="函数式r(t)"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/24.png" alt="函数式"></li>
-</ul>
-<h5><span id="结论">结论</span></h5><p>人口并非一直呈指数趋势增长，而是随着人口增多，增长速度逐渐放缓至人口<strong>趋于饱和</strong>（即K值）。</p>
-<h4><span id="leslie模型">Leslie模型</span></h4><h5><span id="假设">假设</span></h5><p><strong>Leslie矩阵</strong>（人口年龄分布）：<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/25.png" alt="Leslie矩阵"><br>数据需要：人口种族分布、育龄女性年龄分布、婴儿死亡率等</p>
-<h5><span id="模型建立">模型建立</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/26.png" alt="Leslie矩阵特征值"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/27.png" alt="求解"></p>
-<h5><span id="结论">结论</span></h5><p>无论一开始的人口分布向量如何，人口比例在迭代无数次之后总趋近于特征向量x<sub>1</sub>。而人口增长率趋近于特征值λ<sub>1</sub>，说明特征值λ<sub>1</sub>可以用于预测人口增长速度，对于计生有重要意义。</p>
-<h3><span id="3油画鉴定">3.油画鉴定</span></h3><p><strong>鉴定具体用到的方法</strong></p>
-<p>铅白这种原料中含有放射性铅和镭，镭衰变为铅，可用它们确定油画年龄。</p>
-<ul>
-<li>放射性物质在单位时间内的<strong>分解</strong>的原子数与<strong>尚存</strong>放射性物质的原子数成<strong>正比</strong>。<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/10.png" alt="衰变方程"></li>
-<li>每时刻：铀238→<strong>镭226→铅210</strong>→铅206（无放射性）<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/11.png" alt="建立模型"></li>
-<li>令t-t<sub>0</sub>=n(画存在年数)，得λy<sub>0</sub>（即铅单位时间分解数）</li>
-<li>求得铅白中铀含量<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/12.png" alt="求解"><br>放射性平衡：单位时间内母体同位素衰变产生的子体同位素与该子体同位素衰变掉的原子数相等</li>
-</ul>
-<h3><span id="4durer魔方">4.Durer魔方</span></h3><p><strong>涉及哪些知识，归结为什么数学模型</strong></p>
-<p>4行4列：每行、列、对角线、2*2小方块、四角之和均相同<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/07.png" alt="Durer魔方"></p>
-<h4><span id="分析">分析</span></h4><ul>
-<li>任意两个Durer魔方的线性组合仍是Durer魔方</li>
-<li>记D={A=(a<sub>ij</sub>∈R<sup>4×4</sup>|A为Durer魔方)}，则D是线性空间R<sup>4×4</sup>的子空间。<strong>求出D的一组基</strong>，基的任意组合就构成了所有Durer魔方。</li>
-</ul>
-<h4><span id="建模">建模</span></h4><h5><span id="方法1">方法1</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/18.png" alt="方法1约束条件列式"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/19.png" alt="方法1求解"></p>
-<h5><span id="方法2">方法2</span></h5><ul>
-<li>找出7个<strong>线性无关</strong>的Durer魔方（由0和1构造和为1的最简单Durer魔方）<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/20.png" alt="方法2找基"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/21.png" alt="方法2去除8"></li>
-<li>构造同方法1</li>
-</ul>
-<h3><span id="5公务员招聘">5.公务员招聘</span></h3><p><strong>数学模型</strong>、</p>
-<p>招聘情况：</p>
-<ul>
-<li>招聘方法：初试，面试，综合评定</li>
-<li>录用8人到7部门</li>
-<li>每个部门至少1人</li>
-<li>部门分为4个类别</li>
-<li>每个参加面试的人可申报2个工作类别志愿</li>
-</ul>
-<p>任务：</p>
-<ul>
-<li>不考虑志愿，择优录取方案</li>
-<li>考虑志愿，录取方案</li>
-</ul>
-<h4><span id="数据">数据</span></h4><ul>
-<li>个人：<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/34.png" alt="个人信息"><ul>
-<li>笔试成绩</li>
-<li>申报志愿</li>
-<li>4项能力评级</li>
-</ul>
-</li>
-<li>部门：<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/35.png" alt="部门信息"><ul>
-<li>工作类别</li>
-<li>部门5项基本情况</li>
-<li>对个人4项能力期望</li>
-</ul>
-</li>
-</ul>
-<h4><span id="不考虑志愿">不考虑志愿</span></h4><h5><span id="基本假设">基本假设</span></h5><ul>
-<li>各部门和应聘者的相关数据透明</li>
-<li>应聘者4项能力指标在综合评价中地位相等</li>
-<li>用人部门的5项基本情况对应聘者影响相等</li>
-</ul>
-<h5><span id="分析">分析</span></h5><ul>
-<li>量化应聘者初试、复试成绩；量化部门对应聘者综合评分</li>
-<li>目标：（录取人员的<strong>综合成绩</strong>之和+各单位对录取人员的<strong>综合评分</strong>之和）最大</li>
-<li>约束：<ul>
-<li>共录取8人</li>
-<li>一人最多进一个单位</li>
-<li>每个单位最少录取1人，最多2人</li>
-<li>决策变量取0或1</li>
-</ul>
-</li>
-<li>决策变量：x<sub>ij</sub><ul>
-<li>第j个应聘者是否被第i部门录取</li>
-<li>1：是；0：否</li>
-</ul>
-</li>
-</ul>
-<p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/33.png" alt="数学模型"></p>
-<h5><span id="建立模型">建立模型</span></h5><ul>
-<li>复试成绩量化<br>柯西分布隶属函数<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/36.png" alt="复试成绩量化1"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/37.png" alt="复试成绩量化2"></li>
-<li>初试、复试分数规范化求和C<sub>j</sub><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/38.png" alt="规范化"></li>
-<li>部门评分S<sub>ij</sub><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/39.png" alt="满意度1"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/40.png" alt="满意度2"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/41.png" alt="满意度3"></li>
-</ul>
-<h4><span id="考虑志愿">考虑志愿</span></h4><h5><span id="分析">分析</span></h5><ul>
-<li>目标：（部门与应聘者双方相互<strong>综合满意度</strong>）最大</li>
-<li>约束：<ul>
-<li>共录取8人</li>
-<li>一人最多进一个单位</li>
-<li>每个单位最少录取1人，最多2人</li>
-<li>决策变量取0或1</li>
-<li><strong>应聘者不可能分配的部门约束</strong><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/46.png" alt="约束"></li>
-</ul>
-</li>
-<li>决策变量：x<sub>ij</sub><ul>
-<li>第j个应聘者是否被第i部门录取</li>
-<li>1：是；0：否</li>
-</ul>
-</li>
-</ul>
-<h5><span id="模型建立">模型建立</span></h5><ul>
-<li>应聘者对部门5项指标满意度<ul>
-<li>第j个应聘者对第i部门单项满意度：部门客观水平评价值×应聘者对其满意度权值（由志愿确定）</li>
-<li>对部门综合满意度：取平均值</li>
-</ul>
-</li>
-<li>应聘者j对其满意度权值<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/42.png" alt="满意度权值"></li>
-<li>部门i客观水平评价值<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/43.png" alt="水平评价值"></li>
-<li>应聘者j对部门i满意度<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/44.png" alt="满意度"></li>
-<li>双方相互综合满意度<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/45.png" alt="相互综合满意度"></li>
-</ul>
-<h3><span id="6遗传算法蚁群算法粒子群算法">6.遗传算法，蚁群算法，粒子群算法</span></h3><p><strong>基本思想、算法流程（要求不高）</strong></p>
-<p><a href="https://blog.csdn.net/qq_28863045/article/details/80645941" target="_blank" rel="noopener">不同</a>：</p>
-<ul>
-<li>遗传算法适合求解离散问题,具备数学理论支持,但是存在着汉明悬崖等问题.</li>
-<li>粒子群算法适合求解实数问题,算法简单,计算方便,求解速度快,但是存在着陷入局部最优等问题.</li>
-<li>蚁群算法适合在图上搜索路径问题,计算开销会大.</li>
-</ul>
-<h4><span id="遗传算法">遗传算法</span></h4><h5><span id="基本思想">基本思想：</span></h5><ul>
-<li>模拟自然界优胜劣汰的进化现象，把搜索空间映射为遗传空间，把可能的解编码成一个向量（染色体），向量的每个元素称为基因。</li>
-<li>根据问题的目标函数构造一个<strong>适应值函数</strong>，对一个由多个解构成的<strong>种群</strong>进行<strong>选择、交叉与变异</strong>等操作，经多代繁殖，获得适应性最好的<strong>个体</strong>作为问题的最优解。</li>
-</ul>
-<h5><span id="算法流程">算法流程</span></h5><ul>
-<li>1.选择编码策略<ul>
-<li>完备性、健全性、非冗余性</li>
-<li>常用二进制编码</li>
-</ul>
-</li>
-<li>2.定义适应函数<ul>
-<li><strong>适应度</strong>：对问题中个体对象设计的表征其优劣的一种测度。适应度高，其个体遗传到下一代的概率大。</li>
-<li>函数设计：单值、连续、非负、最大化、计算量小</li>
-</ul>
-</li>
-<li>3.确定遗传策略<ul>
-<li>选择、交叉、变异</li>
-<li>适应度比例法</li>
-</ul>
-</li>
-<li>4.随机产生初始化群体</li>
-<li>5.计算适应值</li>
-<li>6.形成下一代</li>
-<li>7.判断群体是否满足指标，或以完成预定迭代次数</li>
-</ul>
-<p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/47.png" alt="流程图"></p>
-<h4><span id="粒子群pso算法">粒子群(PSO)算法</span></h4><h5><span id="基本思想">基本思想</span></h5><ul>
-<li>每个优化问题的解都被想象为搜索空间中的一只鸟，称为粒子</li>
-<li>所有粒子都有一个由被优化的函数决定的适应值，以此判断当前位置的好坏</li>
-<li>每个粒子被赋予记忆性，能记得所寻得的最佳位置</li>
-<li>每个粒子都有自己的位置和速度，以决定他们飞行的方向和距离</li>
-</ul>
-<h5><span id="算法流程">算法流程</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/48.png" alt="流程图"></p>
-<ul>
-<li>pbest：粒子历史最优位置</li>
-<li>gbest：群体历史最优位置</li>
-<li>惯性权重ω：粒子对当前速度集成的多少<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/49.png" alt="流程文字版"></li>
-</ul>
-<h4><span id="蚁群算法">蚁群算法</span></h4><p><a href="https://www.cnblogs.com/caiyishuai/p/11140587.html" target="_blank" rel="noopener">参考</a></p>
-<h5><span id="基本思想">基本思想</span></h5><ul>
-<li>根据具体问题设置多只蚂蚁，分头并行搜索。</li>
-<li>每只蚂蚁完成一次周游后，在行进的路上释放信息素，<strong>信息素量与解的质量成正比</strong>。</li>
-<li>蚂蚁路径的选择根据信息素强度大小（初始信息素量设为相等），同时考虑两点之间的距离，采用随机的局部搜索策略。这使得<strong>距离较短的边，其上的信息素量较大</strong>，后来的蚂蚁选择该边的概率也较大。</li>
-<li>每只蚂蚁只能走合法路线（经过每个城市1次且仅1次），为此设置禁忌表来控制。</li>
-<li>所有蚂蚁都搜索完一次就是<strong>迭代一次</strong>，每迭代一次就对所有的边做一次<strong>信息素更新</strong>，原来的蚂蚁死掉，新的蚂蚁进行新一轮搜索。</li>
-<li>更新信息素包括原有信息素的蒸发和经过的路径上信息素的增加。</li>
-<li>达到预定的迭代步数，或出现停滞现象（所有蚂蚁都选择同样的路径，解不再变化），则算法结束，以当前最优解作为问题的最优解。</li>
-</ul>
-<h5><span id="算法流程">算法流程</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/50.png" alt="流程图"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/51.png" alt="流程文字版"></p>
-<h3><span id="7冰山运输问题">7.冰山运输问题</span></h3><p><strong>建模思路步骤方法（不用写整个公式）</strong></p>
-<p>淡化海水成本0.1英镑/m³；从9600千米外南极用拖船运送取代之，是否可行</p>
-<h4><span id="准备">准备</span></h4><ul>
-<li>船型号、租金、运量</li>
-<li>燃料消耗</li>
-<li>冰山融化速度</li>
-<li>目的：使运送冰山费用最低，再与淡化海水费用比较</li>
-</ul>
-<h4><span id="分析">分析</span></h4><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/05.png" alt="分析"></p>
-<h4><span id="假设">假设</span></h4><ul>
-<li>船速恒定</li>
-<li>冰山为球形（融化均匀）</li>
-<li>每立方米冰融化0.85m³水</li>
-</ul>
-<h4><span id="建模">建模</span></h4><ul>
-<li>求冰山第t天融化速率<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/06.png" alt="分析"></li>
-<li>计算到达时冰山体积<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/07.png" alt="分析"></li>
-<li>计算第t天燃料费用，求总燃料费<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/08.png" alt="分析"></li>
-<li>计算船租金<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/09.png" alt="分析"></li>
-<li>求总运输费用，得每立方米水费用</li>
-</ul>
-<h3><span id="8方凳能否放稳">8.方凳能否放稳</span></h3><p><strong>会写 会证明 会建模</strong></p>
-<p>将四条腿一样长的正方形椅子放在不平的地面上，是否可以通过原地旋转使其四条腿同时着地（即放稳）。</p>
-<h4><span id="假设">假设</span></h4><ul>
-<li>四脚连线成正方形，椅脚与地面接触处视为一点</li>
-<li>旋转时椅子<strong>中心不动</strong></li>
-<li>地面为<strong>连续光滑曲面</strong></li>
-<li>对于椅脚的间距和椅腿的长度而言，地面相对平坦</li>
-</ul>
-<h4><span id="分析">分析</span></h4><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/02.png" alt="俯视图"></p>
-<ul>
-<li><strong>f(θ)</strong>: A，C与地面距离之和</li>
-<li><strong>g(θ)</strong>: B，D与地面距离之和</li>
-<li>f(θ)，g(θ)是连续函数</li>
-<li>椅子在任何位置至少有3点同时着地，故<strong>f(θ)g(θ)=0，0≤θ≤π/2</strong></li>
-<li>设θ=0时，g(0)=0，f(o)&gt;0<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/03.png" alt="原题转化为"></li>
-</ul>
-<h4><span id="求解">求解</span></h4><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/04.png" alt="求解"></p>
-<h3><span id="9森林管理问题">9.森林管理问题</span></h3><p><strong>要会建立模型（无砍伐；有砍伐、补种；怎样砍伐能获取最大价值）</strong></p>
-<p>森林中的树木每年都要砍伐一批出售。为了使这片森林不被耗尽且每年都有所收获，每当砍伐一棵树，应就地补种一棵幼苗，使<strong>森林数目总数保持不变</strong>。假设开始时森林中的树木有不同高度。试解决：</p>
-<ul>
-<li>无砍伐，描述树木自然生长高度状态变化。</li>
-<li>有砍伐、补种，建立砍伐量应满足数学关系式。</li>
-<li>维持稳定收获的前提下，如何砍伐树木获得最大经济价值。</li>
-</ul>
-<h4><span id="分析">分析</span></h4><p>(3)为优化问题：</p>
-<ul>
-<li>目标函数：被砍伐树木的经济价值</li>
-<li>决策变量：砍伐哪些树，砍伐数量</li>
-<li>约束条件：持续稳定收获，总数不变</li>
-</ul>
-<h4><span id="模型假设">模型假设</span></h4><ul>
-<li>树木按高度分为n类<br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/28.png" alt="假设1"></li>
-<li>每年仅砍伐一次，且仅砍伐部分树木。<br>设<strong>y</strong><sub><strong>i</strong></sub>是第i类树木被砍伐棵数。</li>
-<li>设森林数目总数s。<br>记x<sub>i</sub>(t)为第t年时第i类树木的数量，则：<strong>x<sub>1</sub>(t)+x<sub>2</sub>(t)+…+x<sub>n</sub>(t)=s</strong></li>
-<li>每一棵幼苗生长后都能收获。</li>
-<li>一年树木生长不超过一个高度级。<br>设<strong>g</strong><sub><strong>k</strong></sub>是一年后从第k类进入k+1类的比例。</li>
-</ul>
-<h4><span id="模型建立">模型建立</span></h4><h5><span id="无砍伐求树木生长">无砍伐，求树木生长</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/29.png" alt="问题1"></p>
-<h5><span id="有砍伐求砍伐量">有砍伐，求砍伐量</span></h5><p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/30.png" alt="问题2方程"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/31.png" alt="问题2矩阵"></p>
-<h5><span id="最优策略">最优策略</span></h5><ul>
-<li>目标函数：被砍伐树木的价值<ul>
-<li>f(y<sub>2</sub>,y<sub>3</sub>,…,y<sub>n</sub>)=p<sub>2</sub>y<sub>2</sub>+p<sub>3</sub>y<sub>3</sub>+…+p<sub>n</sub>y<sub>n</sub></li>
-</ul>
-</li>
-<li>约束条件：<ul>
-<li>y<sub>i</sub>≥0 (i=1,2,…,n)</li>
-<li>x<sub>1</sub>(t)+x<sub>2</sub>(t)+…+x<sub>n</sub>(t)=s</li>
-<li>x<sub>i</sub>≥0 (i=1,2,…,n)</li>
-</ul>
-</li>
-<li>决策变量： y<sub>1</sub>, y<sub>2</sub>,…, y<sub>n</sub><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/32.png" alt="问题3联立"></li>
-</ul>
-<h2><span id="作业上的">作业上的</span></h2><h3><span id="1轮船传染病传播模型">1.轮船传染病传播模型</span></h3><p>很好建模，不用计算机，微分方程模型，要会做</p>
-<p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/52.png" alt="t1-1"></p>
-<h3><span id="2战机规避路线">2.战机规避路线</span></h3><p>不难，要写出微分方程模型并且求解，得到结论</p>
-<p><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/53.png" alt="t3-2(1)"><br><img src="//0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/54.png" alt="t3-2(2)"></p>
-<h3><span id="3了解小作业-大作业上的问题">3.了解小作业、大作业上的问题</span></h3><p>自己做了些什么</p>
-<h3><span id="4高数">4.高数</span></h3><p>微分方程求解，二重积分计算</p>
-<h2><span id="题目">题目</span></h2><ol>
-<li><p>5个简答题 6’</p>
-</li>
-<li><p>3～4个模型建立题 15’-20’</p>
-</li>
-<li><p>以PPT和作业为主</p>
-</li>
-</ol>
-<p>写清建模过程。</p>
-<p>不考MATLAB代码，只考学过讲过的题目。</p>
-<p>不考图论。</p>
+        <!-- toc -->
 
+<ul>
+<li><a href="#0数学模型的定义一般步骤">0.数学模型的定义，一般步骤</a></li>
+<li><a href="#1放射性废物处理">1.放射性废物处理</a><ul>
+<li><a href="#问题关键">问题关键</a></li>
+<li><a href="#准备">准备</a></li>
+<li><a href="#分析">分析</a></li>
+</ul>
+</li>
+<li><a href="#2人口预测">2.人口预测</a><ul>
+<li><a href="#马尔萨斯模型">马尔萨斯模型</a><ul>
+<li><a href="#假设">假设</a></li>
+<li><a href="#模型建立">模型建立</a></li>
+<li><a href="#结论">结论</a></li>
+</ul>
+</li>
+<li><a href="#logistic模型">Logistic模型</a><ul>
+<li><a href="#假设-1">假设</a></li>
+<li><a href="#模型建立-1">模型建立</a></li>
+<li><a href="#结论-1">结论</a></li>
+</ul>
+</li>
+<li><a href="#leslie模型">Leslie模型</a><ul>
+<li><a href="#假设-2">假设</a></li>
+<li><a href="#模型建立-2">模型建立</a></li>
+<li><a href="#结论-2">结论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3油画鉴定">3.油画鉴定</a></li>
+<li><a href="#4durer魔方">4.Durer魔方</a><ul>
+<li><a href="#分析-1">分析</a></li>
+<li><a href="#建模">建模</a><ul>
+<li><a href="#方法1">方法1</a></li>
+<li><a href="#方法2">方法2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5公务员招聘">5.公务员招聘</a><ul>
+<li><a href="#数据">数据</a></li>
+<li><a href="#不考虑志愿">不考虑志愿</a><ul>
+<li><a href="#基本假设">基本假设</a></li>
+<li><a href="#分析-2">分析</a></li>
+<li><a href="#建立模型">建立模型</a></li>
+</ul>
+</li>
+<li><a href="#考虑志愿">考虑志愿</a><ul>
+<li><a href="#分析-3">分析</a></li>
+<li><a href="#模型建立-3">模型建立</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#6遗传算法蚁群算法粒子群算法">6.遗传算法，蚁群算法，粒子群算法</a><ul>
+<li><a href="#遗传算法">遗传算法</a><ul>
+<li><a href="#基本思想">基本思想：</a></li>
+<li><a href="#算法流程">算法流程</a></li>
+</ul>
+</li>
+<li><a href="#粒子群pso算法">粒子群(PSO)算法</a><ul>
+<li><a href="#基本思想">基本思想</a></li>
+<li><a href="#算法流程-1">算法流程</a></li>
+</ul>
+</li>
+<li><a href="#蚁群算法">蚁群算法</a><ul>
+<li><a href="#基本思想-1">基本思想</a></li>
+<li><a href="#算法流程-2">算法流程</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#7冰山运输问题">7.冰山运输问题</a><ul>
+<li><a href="#准备-1">准备</a></li>
+<li><a href="#分析-4">分析</a></li>
+<li><a href="#假设-3">假设</a></li>
+<li><a href="#建模-1">建模</a></li>
+</ul>
+</li>
+<li><a href="#8方凳能否放稳">8.方凳能否放稳</a><ul>
+<li><a href="#假设-4">假设</a></li>
+<li><a href="#分析-5">分析</a></li>
+<li><a href="#求解">求解</a></li>
+</ul>
+</li>
+<li><a href="#9森林管理问题">9.森林管理问题</a><ul>
+<li><a href="#分析-6">分析</a></li>
+<li><a href="#模型假设">模型假设</a></li>
+<li><a href="#模型建立-4">模型建立</a><ul>
+<li><a href="#无砍伐求树木生长">无砍伐，求树木生长</a></li>
+<li><a href="#有砍伐求砍伐量">有砍伐，求砍伐量</a></li>
+<li><a href="#最优策略">最优策略</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="#作业上的">作业上的</a></li>
+</ul>
+</li>
+<li><a href="#1轮船传染病传播模型">1.轮船传染病传播模型</a></li>
+<li><a href="#2战机规避路线">2.战机规避路线</a></li>
+<li><a href="#3了解小作业-大作业上的问题">3.了解小作业、大作业上的问题</a></li>
+<li><a href="#4高数">4.高数</a><ul>
+<li><a href="#题目">题目</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+        
+          <p class="article-more-link">
+            <a href="/2020/06/13/数学建模考前复习笔记/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/" data-id="ckbcgq20h000hhsvxiwq8sh8c" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/" data-id="ckbcgve4f000kg0vxfqvnhdn8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学建模/">数学建模</a></li></ul>
@@ -451,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/" data-id="ckbcgq209000chsvxk1zdzha1" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/" data-id="ckbcgve4e000ig0vxsmlnc9r6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编译原理/">编译原理</a></li></ul>
@@ -498,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/11/test/" data-id="ckbcgq21g001ghsvxsmjyufx2" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/11/test/" data-id="ckbcgve4d000gg0vxl8h3xeel" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -614,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/02/02/galgame攻略记录/" data-id="ckbcgq1zt0007hsvx6vjx951y" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/02/02/galgame攻略记录/" data-id="ckbcgve4a000eg0vx0ihovzsj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏/">游戏</a></li></ul>
@@ -657,7 +477,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/01/25/电路编程/" data-id="ckbcgq20e000fhsvxxybc659u" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/01/25/电路编程/" data-id="ckbcgve48000cg0vxrz4b98ri" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li></ul>
@@ -700,7 +520,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/10/Huffman编码/" data-id="ckbcgq1zx0008hsvxun1l3x2o" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/10/Huffman编码/" data-id="ckbcgve440009g0vxtouc1iuk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
@@ -807,7 +627,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/09/C-面向对象课程笔记/" data-id="ckbcgq20t000nhsvx7xrqfp9f" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/09/C-面向对象课程笔记/" data-id="ckbcgve3v0005g0vxyini2fu1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
@@ -850,7 +670,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/09/雪夜/" data-id="ckbcgq203000bhsvxn15t90em" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/09/雪夜/" data-id="ckbcgve410008g0vxiterxcm4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/废纸篓/">废纸篓</a></li></ul>
@@ -952,7 +772,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/" data-id="ckbcgq20u000phsvxga5fozoo" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/" data-id="ckbcgve4x001hg0vxpmk5rezs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/お笑い/">お笑い</a></li></ul>
@@ -995,7 +815,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/07/17/ヤミ/" data-id="ckbcgq1zk0003hsvx2votdw0z" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/07/17/ヤミ/" data-id="ckbcgve3n0003g0vx5veqymg6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/废纸篓/">废纸篓</a></li></ul>
