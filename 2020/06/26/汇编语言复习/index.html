@@ -7,13 +7,13 @@
   
   <title>汇编语言复习 | 無限のゴミ箱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章 基础知识计算机内部是采用什么计数制来表示数和信息的？ 二进制B 十进制D 十六进制H 八进制O 二进制计量单位 比特bit 字节byte=8bit 字word=2byte   基本方法：除法 降幂法  计算机中的整数有几种表示方式？最常用的是哪一种码制？ 原码：符号+绝对值 0的表示方法不唯一（符号可正可负）   反码：正同原；负数值取反 0的表示方法不唯一（符号可正可负）   补码：正">
+  <meta name="description" content="第一章 基础知识 计算机内部是采用什么计数制来表示数和信息的？ 计算机中的整数有几种表示方式？最常用的是哪一种码制？ 求补的运算规则 常用ASCII码（记忆）   第二章 80x86计算机组织 汇编程序CPU可见的寄存阵列用途（记忆） 数据寄存器 指针及变址寄存器 段寄存器 控制寄存器   计算机存储器组织方式 存储单元的地址和内容 存储器地址表示方式     第三章 80x86的指令系统和">
 <meta name="keywords" content="学校,汇编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言复习">
 <meta property="og:url" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/index.html">
 <meta property="og:site_name" content="無限のゴミ箱">
-<meta property="og:description" content="第一章 基础知识计算机内部是采用什么计数制来表示数和信息的？ 二进制B 十进制D 十六进制H 八进制O 二进制计量单位 比特bit 字节byte=8bit 字word=2byte   基本方法：除法 降幂法  计算机中的整数有几种表示方式？最常用的是哪一种码制？ 原码：符号+绝对值 0的表示方法不唯一（符号可正可负）   反码：正同原；负数值取反 0的表示方法不唯一（符号可正可负）   补码：正">
+<meta property="og:description" content="第一章 基础知识 计算机内部是采用什么计数制来表示数和信息的？ 计算机中的整数有几种表示方式？最常用的是哪一种码制？ 求补的运算规则 常用ASCII码（记忆）   第二章 80x86计算机组织 汇编程序CPU可见的寄存阵列用途（记忆） 数据寄存器 指针及变址寄存器 段寄存器 控制寄存器   计算机存储器组织方式 存储单元的地址和内容 存储器地址表示方式     第三章 80x86的指令系统和">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/04.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/05.png">
@@ -27,6 +27,8 @@
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/13.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/14.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/15.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/16.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/17.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/18.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/19.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/20.png">
@@ -34,10 +36,10 @@
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/22.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/23.png">
 <meta property="og:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/24.png">
-<meta property="og:updated_time" content="2020-06-25T23:56:52.381Z">
+<meta property="og:updated_time" content="2020-08-26T05:35:21.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编语言复习">
-<meta name="twitter:description" content="第一章 基础知识计算机内部是采用什么计数制来表示数和信息的？ 二进制B 十进制D 十六进制H 八进制O 二进制计量单位 比特bit 字节byte=8bit 字word=2byte   基本方法：除法 降幂法  计算机中的整数有几种表示方式？最常用的是哪一种码制？ 原码：符号+绝对值 0的表示方法不唯一（符号可正可负）   反码：正同原；负数值取反 0的表示方法不唯一（符号可正可负）   补码：正">
+<meta name="twitter:description" content="第一章 基础知识 计算机内部是采用什么计数制来表示数和信息的？ 计算机中的整数有几种表示方式？最常用的是哪一种码制？ 求补的运算规则 常用ASCII码（记忆）   第二章 80x86计算机组织 汇编程序CPU可见的寄存阵列用途（记忆） 数据寄存器 指针及变址寄存器 段寄存器 控制寄存器   计算机存储器组织方式 存储单元的地址和内容 存储器地址表示方式     第三章 80x86的指令系统和">
 <meta name="twitter:image" content="http://0wxzg0.github.io/2020/06/26/汇编语言复习/04.png">
   
     <link rel="alternate" href="/atom.xml" title="無限のゴミ箱" type="application/atom+xml">
@@ -108,7 +110,105 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-		<p><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/04.png" alt="考核方法"></p>
+		<!-- toc -->
+
+<ul>
+<li><a href="#第一章-基础知识">第一章 基础知识</a><ul>
+<li><a href="#计算机内部是采用什么计数制来表示数和信息的">计算机内部是采用什么计数制来表示数和信息的？</a></li>
+<li><a href="#计算机中的整数有几种表示方式最常用的是哪一种码制">计算机中的整数有几种表示方式？最常用的是哪一种码制？</a></li>
+<li><a href="#求补的运算规则">求补的运算规则</a></li>
+<li><a href="#常用ascii码记忆">常用ASCII码（记忆）</a></li>
+</ul>
+</li>
+<li><a href="#第二章-80x86计算机组织">第二章 80x86计算机组织</a><ul>
+<li><a href="#汇编程序cpu可见的寄存阵列用途记忆">汇编程序CPU可见的寄存阵列用途（记忆）</a><ul>
+<li><a href="#数据寄存器">数据寄存器</a></li>
+<li><a href="#指针及变址寄存器">指针及变址寄存器</a></li>
+<li><a href="#段寄存器">段寄存器</a></li>
+<li><a href="#控制寄存器">控制寄存器</a></li>
+</ul>
+</li>
+<li><a href="#计算机存储器组织方式">计算机存储器组织方式</a><ul>
+<li><a href="#存储单元的地址和内容">存储单元的地址和内容</a></li>
+<li><a href="#span-idjp2存储器地址表示方式span"><span id="jp2">存储器地址表示方式</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第三章-80x86的指令系统和寻址方式">第三章 80x86的指令系统和寻址方式</a><ul>
+<li><a href="#指令系统">指令系统</a><ul>
+<li><a href="#数据传送指令">数据传送指令</a></li>
+<li><a href="#算数指令">算数指令</a></li>
+<li><a href="#逻辑指令">逻辑指令</a></li>
+<li><a href="#串处理指令">串处理指令</a></li>
+<li><a href="#控制转移指令">控制转移指令</a></li>
+<li><a href="#处理器控制指令">处理器控制指令</a></li>
+</ul>
+</li>
+<li><a href="#寻址方式">寻址方式</a><ul>
+<li><a href="#与数据有关的寻址方式">与数据有关的寻址方式</a></li>
+<li><a href="#与转移地址有关的寻址方式">与转移地址有关的寻址方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第四章-汇编语言程序格式-伪操作伪指令">第四章 汇编语言程序格式–伪操作（伪指令）</a><ul>
+<li><a href="#数据定义伪指令"><strong>数据定义</strong>伪指令</a></li>
+<li><a href="#操作数运算符">操作数运算符</a></li>
+<li><a href="#程序命名结束和过程伪指令">程序命名，结束和过程伪指令</a></li>
+<li><a href="#段定义伪指令">段定义伪指令</a><ul>
+<li><a href="#span-idjp7segment伪指令span"><span id="jp7">segment伪指令</span></a></li>
+<li><a href="#assume伪指令">ASSUME伪指令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第五章-循环与分支程序设计">第五章 循环与分支程序设计</a><ul>
+<li><a href="#循环">循环</a><ul>
+<li><a href="#起泡排序法">起泡排序法</a></li>
+</ul>
+</li>
+<li><a href="#分支">分支</a><ul>
+<li><a href="#折半查找法">折半查找法</a></li>
+<li><a href="#跳转表法实现case结构">跳转表法实现CASE结构</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第六章-子程序结构">第六章 子程序结构</a><ul>
+<li><a href="#子程序参数传递方法">子程序参数传递方法</a></li>
+<li><a href="#伪操作struc的用途是什么">伪操作STRUC的用途是什么</a></li>
+<li><a href="#子程序嵌套与递归的区别">子程序嵌套与递归的区别</a></li>
+</ul>
+</li>
+<li><a href="#第七章-高级汇编语言技术">第七章 高级汇编语言技术</a><ul>
+<li><a href="#宏汇编">宏汇编</a><ul>
+<li><a href="#宏汇编操作符">宏汇编操作符</a></li>
+<li><a href="#local伪操作">LOCAL伪操作</a></li>
+</ul>
+</li>
+<li><a href="#宏定义与子程序的异同">宏定义与子程序的异同</a></li>
+<li><a href="#重复汇编">重复汇编</a></li>
+<li><a href="#条件汇编">条件汇编</a></li>
+</ul>
+</li>
+<li><a href="#第八章-输入输出程序设计">第八章 输入输出程序设计</a><ul>
+<li><a href="#in-out指令的用法">IN OUT指令的用法</a></li>
+<li><a href="#中断传送方式工作机制与编程方法">中断传送方式工作机制与编程方法</a></li>
+</ul>
+</li>
+<li><a href="#第九章-bios和dos中断">第九章 BIOS和DOS中断</a><ul>
+<li><a href="#调用方法">调用方法</a></li>
+<li><a href="#键盘io">键盘I/O</a></li>
+<li><a href="#显示器io">显示器I/O</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<a id="more"></a>
+
+<p><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/04.png" alt="考核方法"></p>
 <h1><span id="第一章-基础知识">第一章 基础知识</span></h1><h2><span id="计算机内部是采用什么计数制来表示数和信息的">计算机内部是采用什么计数制来表示数和信息的？</span></h2><ul>
 <li>二进制B 十进制D 十六进制H 八进制O</li>
 <li>二进制计量单位<ul>
@@ -148,7 +248,6 @@
 <li>$：24H</li>
 <li>空格SPACE：20H</li>
 </ul>
-<p><span id="jump0">test text</span></p>
 <h1><span id="第二章-80x86计算机组织">第二章 80x86计算机组织</span></h1><ul>
 <li>实模式：由16位段寄存器+16位偏移地址形成20位内存物理地址；所有段均是可读、写、可执行的</li>
 <li>保护模式</li>
@@ -270,42 +369,203 @@
 </li>
 <li><p><span id="jp3">偏移地址：</span>段内相对于段起始地址的偏移量，又称<strong>有效地址EA</strong></p>
 <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 例：```MOV   AX,  [BX+SI*2+NUM]</span><br></pre></td></tr></table></figure>
+<li><code>[基址+变址*比例因子+位移量]</code></li>
+<li>例：<code>MOV   AX,  [BX+SI*2+NUM]</code></li>
+<li>基址<code>BX</code>：存放在<strong>基址寄存器</strong>（BP,BX)中，用来指向数据段中数组或字符串的首地址</li>
+<li>变址<code>SI</code>：存放在<strong>变址寄存器</strong>（SI,DI）中，用来指定数组中的某个元素或字符串中的某个字符</li>
+<li>比例因子<code>2</code>：数组元素的字节数，值可取1、2、4、8</li>
+<li>位移量<code>NUM</code>：存储单元地址相对于某处的位移量</li>
+</ul>
 </li>
-<li><p>基址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">    - 变址```SI```：存放在**变址寄存器**（SI,DI）中，用来指定数组中的某个元素或字符串中的某个字符</span><br><span class="line">    - 比例因子```2```：数组元素的字节数，值可取1、2、4、8</span><br><span class="line">    - 位移量```NUM```：存储单元地址相对于某处的位移量</span><br><span class="line">- **物理地址 = 10H × 段寄存器 + 偏移地址**</span><br><span class="line">- 其它段基址和偏移量</span><br><span class="line"></span><br><span class="line">|操作类型|段基地址|偏移量|</span><br><span class="line">| -- | -- | -- |</span><br><span class="line">|**指令**|CS|IP|</span><br><span class="line">|**堆栈操作**|SS|SP|</span><br><span class="line">|普通变量|DS|EA|</span><br><span class="line">|字符串指令的源串地址|DS|SI|</span><br><span class="line">|字符串指令的目标串地址|ES|DI|</span><br><span class="line">|BP用作基址寄存器|SS|EA|</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 第三章 80x86的指令系统和寻址方式</span><br><span class="line"></span><br><span class="line">## 指令系统</span><br><span class="line"></span><br><span class="line">机器指令格式：OP  dst,  src</span><br><span class="line">- OP 操作码</span><br><span class="line">- dst 目的操作数</span><br><span class="line">- src 源操作数</span><br><span class="line"></span><br><span class="line">操作数通常保存在</span><br><span class="line">- 指令中</span><br><span class="line">- CPU的寄存器中</span><br><span class="line">- 内存单元中</span><br><span class="line">- I/O接口寄存器中</span><br><span class="line"></span><br><span class="line">### 数据传送指令</span><br><span class="line">- 通用数据传送指令</span><br><span class="line">    - MOV</span><br><span class="line">        - **立即数不能直接送入段寄存器**</span><br><span class="line">        - 立即数不能作为目标操作数</span><br><span class="line">        - 两者不能同时为段寄存器</span><br><span class="line">        - 两个存储单元之间不能直接传送</span><br><span class="line">    - PUSH</span><br><span class="line">        - 1.SP←SP-2</span><br><span class="line">        - 2.(SS*16+SP+1,SS*16+SP)←SRC</span><br><span class="line">        - CPU自动修改堆栈指针SP内容，且为**地址减量**</span><br><span class="line">        - 堆栈操作必须以字为单位</span><br><span class="line">    - POP</span><br><span class="line">        - 1.DST←(SS*16+SP+1,SS*16+SP)</span><br><span class="line">        - 2.SP←SP+2</span><br><span class="line">        - CPU自动修改堆栈指针SP内容，且为**地址减量**</span><br><span class="line">        - DST不能是CS，**CS不能人为改动**</span><br><span class="line">    - XCHG</span><br><span class="line">        - 可交换的有：</span><br><span class="line">            -寄存器操作数，寄存器操作数```XCHG  AL,  BH</span><br></pre></td></tr></table></figure></p>
-<pre><code>- 寄存器操作数，存储器操作数<figure class="highlight plain"><figcaption><span>BX,  [BP+SI]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">        - **不允许使用段寄存器**</span><br><span class="line">- 累加器专用传送指令</span><br><span class="line">    - IN</span><br><span class="line">        - 长格式：```IN   AX,  PORT```（PORT为外设端口）</span><br><span class="line">        - 长、短格式：```IN   AX,  DX</span><br></pre></td></tr></table></figure></code></pre></li>
-<li><p>OUT</p>
+<li><p><strong>物理地址 = 10H × 段寄存器 + 偏移地址</strong></p>
+</li>
+<li><p>其它段基址和偏移量</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>操作类型</th>
+<th>段基地址</th>
+<th>偏移量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>指令</strong></td>
+<td>CS</td>
+<td>IP</td>
+</tr>
+<tr>
+<td><strong>堆栈操作</strong></td>
+<td>SS</td>
+<td>SP</td>
+</tr>
+<tr>
+<td>普通变量</td>
+<td>DS</td>
+<td>EA</td>
+</tr>
+<tr>
+<td>字符串指令的源串地址</td>
+<td>DS</td>
+<td>SI</td>
+</tr>
+<tr>
+<td>字符串指令的目标串地址</td>
+<td>ES</td>
+<td>DI</td>
+</tr>
+<tr>
+<td>BP用作基址寄存器</td>
+<td>SS</td>
+<td>EA</td>
+</tr>
+</tbody></table>
+<h1><span id="第三章-80x86的指令系统和寻址方式">第三章 80x86的指令系统和寻址方式</span></h1><h2><span id="指令系统">指令系统</span></h2><p>机器指令格式：OP  dst,  src</p>
 <ul>
-<li><p>长格式：<figure class="highlight plain"><figcaption><span>PORT,  AX```（PORT为外设端口）</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    - 长、短格式：```OUT   DX,  AX``</span><br><span class="line">- XLAT</span><br><span class="line">    - **只能使用AL、BX**</span><br><span class="line">        - BX：字节表格首地址的偏移地址</span><br><span class="line">        - AL：需转换代码</span><br><span class="line">    - 换码指令```XLAT```或```XLAT OPR</span><br></pre></td></tr></table></figure></p>
+<li>OP 操作码</li>
+<li>dst 目的操作数</li>
+<li>src 源操作数</li>
+</ul>
+<p>操作数通常保存在</p>
+<ul>
+<li>指令中</li>
+<li>CPU的寄存器中</li>
+<li>内存单元中</li>
+<li>I/O接口寄存器中</li>
+</ul>
+<h3><span id="数据传送指令">数据传送指令</span></h3><ul>
+<li>通用数据传送指令<ul>
+<li>MOV<ul>
+<li><strong>立即数不能直接送入段寄存器</strong></li>
+<li>立即数不能作为目标操作数</li>
+<li>两者不能同时为段寄存器</li>
+<li>两个存储单元之间不能直接传送</li>
+</ul>
 </li>
-<li><p>用于把一种代码转换为另一种</p>
+<li>PUSH<ul>
+<li>1.SP←SP-2</li>
+<li>2.(SS<em>16+SP+1,SS</em>16+SP)←SRC</li>
+<li>CPU自动修改堆栈指针SP内容，且为<strong>地址减量</strong></li>
+<li>堆栈操作必须以字为单位</li>
+</ul>
 </li>
+<li>POP<ul>
+<li>1.DST←(SS<em>16+SP+1,SS</em>16+SP)</li>
+<li>2.SP←SP+2</li>
+<li>CPU自动修改堆栈指针SP内容，且为<strong>地址减量</strong></li>
+<li>DST不能是CS，<strong>CS不能人为改动</strong></li>
+</ul>
+</li>
+<li>XCHG<ul>
+<li>可交换的有：<br>  -寄存器操作数，寄存器操作数<code>XCHG  AL,  BH</code><ul>
+<li>寄存器操作数，存储器操作数<code>XCHG  BX,  [BP+SI]</code></li>
+</ul>
+</li>
+<li><strong>不允许使用段寄存器</strong></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>地址传送指令</p>
-<ul>
-<li><p>LEA</p>
-<ul>
-<li><p>把源操作数的有效地址EA送到指定的寄存器中</p>
+<li>累加器专用传送指令<ul>
+<li>IN<ul>
+<li>长格式：<code>IN   AX,  PORT</code>（PORT为外设端口）</li>
+<li>长、短格式：<code>IN   AX,  DX</code></li>
+</ul>
 </li>
-<li><figure class="highlight plain"><figcaption><span>REG,  SRC```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">        - REG不能是段寄存器</span><br><span class="line">        - SRC必须为[存储器寻址方式](#jp4)</span><br><span class="line">        - 和mov reg， offset src区别？</span><br><span class="line">    - LDS</span><br><span class="line">    - LES</span><br><span class="line">- 标志寄存器传送指令</span><br><span class="line">    - LAHF</span><br><span class="line">    - SAHF</span><br><span class="line">    - PUSHF</span><br><span class="line">    - POPF</span><br><span class="line">- 类型转换指令</span><br><span class="line">    - CBW</span><br><span class="line">    - CWD/CWDE</span><br><span class="line">    - CDQ</span><br><span class="line">    - BSWAP</span><br><span class="line"></span><br><span class="line">### 算数指令</span><br><span class="line">目标操作数不允许是立即数和CS段寄存器。</span><br><span class="line">- 加法指令</span><br><span class="line">    - ADD</span><br><span class="line">        - 加减均按有符号数处理</span><br><span class="line">    - ADC</span><br><span class="line">        - 带进位</span><br><span class="line">    - INC</span><br><span class="line">        - 自增1</span><br><span class="line">    - XADD</span><br><span class="line">        - 交换相加</span><br><span class="line">- 减法指令</span><br><span class="line">    - SUB</span><br><span class="line">    - SBB</span><br><span class="line">        - 带借位减</span><br><span class="line">    - DEC</span><br><span class="line">        - 自减1</span><br><span class="line">    - NEG</span><br><span class="line">        - 求补</span><br><span class="line">    - CMP</span><br><span class="line">        - ```CMP   DST,  SRC</span><br></pre></td></tr></table></figure>
+<li>OUT<ul>
+<li>长格式：<code>OUT   PORT,  AX</code>（PORT为外设端口）</li>
+<li>长、短格式：<code>OUT   DX,  AX</code></li>
+</ul>
 </li>
-<li><p>执行两数相减操作DST-SRC后根据结果设置标志位，不改变原值</p>
+<li>XLAT<ul>
+<li><strong>只能使用AL、BX</strong><ul>
+<li>BX：字节表格首地址的偏移地址</li>
+<li>AL：需转换代码</li>
+</ul>
+</li>
+<li>换码指令<code>XLAT</code>或<code>XLAT OPR</code></li>
+<li>用于把一种代码转换为另一种</li>
+</ul>
 </li>
 </ul>
 </li>
-<li><p>溢出判断：加减法执行后</p>
+<li>地址传送指令<ul>
+<li>LEA<ul>
+<li>把源操作数的有效地址EA送到指定的寄存器中</li>
+<li><code>LWA   REG,  SRC</code></li>
+<li>REG不能是段寄存器</li>
+<li>SRC必须为<a href="#jp4">存储器寻址方式</a></li>
+<li>和mov reg， offset src区别？</li>
+</ul>
+</li>
+<li>LDS</li>
+<li>LES</li>
+</ul>
+</li>
+<li>标志寄存器传送指令<ul>
+<li>LAHF</li>
+<li>SAHF</li>
+<li>PUSHF</li>
+<li>POPF</li>
+</ul>
+</li>
+<li>类型转换指令<ul>
+<li>CBW</li>
+<li>CWD/CWDE</li>
+<li>CDQ</li>
+<li>BSWAP</li>
+</ul>
+</li>
+</ul>
+<h3><span id="算数指令">算数指令</span></h3><p>目标操作数不允许是立即数和CS段寄存器。</p>
 <ul>
+<li>加法指令<ul>
+<li>ADD<ul>
+<li>加减均按有符号数处理</li>
+</ul>
+</li>
+<li>ADC<ul>
+<li>带进位</li>
+</ul>
+</li>
+<li>INC<ul>
+<li>自增1</li>
+</ul>
+</li>
+<li>XADD<ul>
+<li>交换相加</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>减法指令<ul>
+<li>SUB</li>
+<li>SBB<ul>
+<li>带借位减</li>
+</ul>
+</li>
+<li>DEC<ul>
+<li>自减1</li>
+</ul>
+</li>
+<li>NEG<ul>
+<li>求补</li>
+</ul>
+</li>
+<li>CMP<ul>
+<li><code>CMP   DST,  SRC</code></li>
+<li>执行两数相减操作DST-SRC后根据结果设置标志位，不改变原值</li>
+</ul>
+</li>
+<li>溢出判断：加减法执行后<ul>
 <li>CF=1，无符号数发生溢出</li>
 <li>OF=1，有符号数发生溢出</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><span id="jump1">乘法指令</span></p>
-<ul>
+<li><span id="jump1">乘法指令</span><ul>
 <li>MUL<ul>
 <li>无符号数乘法</li>
 <li>目的操作数是累加器AX或AL</li>
@@ -318,8 +578,7 @@
 </li>
 </ul>
 </li>
-<li><p>除法指令</p>
-<ul>
+<li>除法指令<ul>
 <li>DIV<ul>
 <li>源操作数可以用<strong>除立即数以外</strong>的任意寻址方式</li>
 <li>字节除法：AX/SRC<del>8</del>，商AL，余数AH</li>
@@ -330,8 +589,7 @@
 <li>IDIV</li>
 </ul>
 </li>
-<li><p>十进制调整指令（会考吗？）</p>
-<ul>
+<li>十进制调整指令（会考吗？）<ul>
 <li>DAA</li>
 <li>DAS</li>
 <li>AAA</li>
@@ -342,70 +600,62 @@
 </li>
 </ul>
 <h3><span id="逻辑指令">逻辑指令</span></h3><ul>
-<li><p>逻辑运算指令</p>
-<ul>
-<li><p>AND</p>
-</li>
-<li><p>OR</p>
-</li>
-<li><p>NOT</p>
-<ul>
+<li>逻辑运算指令<ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT<ul>
 <li>不允许立即数</li>
 </ul>
 </li>
-<li><p>XOR</p>
+<li>XOR</li>
+<li>TEST<ul>
+<li><code>TEST  OPR1,  OPR2</code>得到OPR1^OPR2，但仅影响标志位，不改变操作数本身</li>
+</ul>
 </li>
-<li><p>TEST</p>
-<ul>
-<li><figure class="highlight plain"><figcaption><span>OPR1,  OPR2```得到OPR1^OPR2，但仅影响标志位，不改变操作数本身</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 移位指令</span><br><span class="line">    - SHL</span><br><span class="line">        - 逻辑左移</span><br><span class="line">        - ```SHL   DST,  CNT</span><br></pre></td></tr></table></figure>
-
-<ul>
+</ul>
+</li>
+<li>移位指令<ul>
+<li>SHL<ul>
+<li>逻辑左移</li>
+<li><code>SHL   DST,  CNT</code><ul>
 <li>CNT=1，直接写在指令中</li>
 <li>CNT&gt;1，由CL寄存器给出</li>
 </ul>
 </li>
-<li><p>末位补0，首位存入CF</p>
-</li>
+<li>末位补0，首位存入CF</li>
 </ul>
 </li>
-<li><p>SAL</p>
-<ul>
+<li>SAL<ul>
 <li>算数左移</li>
 <li>末位补0，首位存入CF</li>
 </ul>
 </li>
-<li><p>SHR</p>
-<ul>
+<li>SHR<ul>
 <li>逻辑右移</li>
 <li>首位补0，末位存入CF</li>
 </ul>
 </li>
-<li><p>SAR</p>
-<ul>
+<li>SAR<ul>
 <li>算数右移</li>
 <li><strong>首位不变</strong>，末位存入CF</li>
 </ul>
 </li>
-<li><p>ROL</p>
-<ul>
+<li>ROL<ul>
 <li>循环左移</li>
 <li>首位作末位，存入CF</li>
 </ul>
 </li>
-<li><p>ROR</p>
-<ul>
+<li>ROR<ul>
 <li>循环右移</li>
 <li>末位作首位，存入CF</li>
 </ul>
 </li>
-<li><p>RCL</p>
-<ul>
+<li>RCL<ul>
 <li>带进位循环左移</li>
 <li>CF作末位，首位存入CF</li>
 </ul>
 </li>
-<li><p>RCR</p>
-<ul>
+<li>RCR<ul>
 <li>带进位循环右移</li>
 <li>CF作首位，末位存入CF</li>
 </ul>
@@ -414,14 +664,12 @@
 </li>
 </ul>
 <h3><span id="串处理指令">串处理指令</span></h3><ul>
-<li><p>设置方向标志指令</p>
-<ul>
+<li>设置方向标志指令<ul>
 <li>CLD</li>
 <li>STD</li>
 </ul>
 </li>
-<li><p>串处理指令</p>
-<ul>
+<li>串处理指令<ul>
 <li>MOVSB/MOVSW：传送</li>
 <li>STOSB/STOSW：存入</li>
 <li>LODSB/LODSW：取出</li>
@@ -430,32 +678,113 @@
 <li>单条串指令只能处理字符串中的一个字符。与重复前缀一起使用可处理整个字符串。</li>
 </ul>
 </li>
-<li><p>串重复前缀</p>
-<ul>
-<li><p>REP：重复</p>
-<ul>
-<li><p>例：<figure class="highlight plain"><figcaption><span>MOVSB ES:[DI], DS:[SI]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">    - REPE/REPZ：相等/为0则重复</span><br><span class="line">        - 1.若CX=0（计数）或ZF=0（不相等），则结束重复</span><br><span class="line">        - 2.否则修改计数器CX-1，执行串操作，重复</span><br><span class="line">    - REPNE/PEPNZ：不相等/不为0则重复</span><br><span class="line"></span><br><span class="line">### 控制转移指令</span><br><span class="line">- 无条件转移指令</span><br><span class="line">    - JMP</span><br><span class="line">        - 段内直接短转移```JMP  SHORT  OPR``` 8位</span><br><span class="line">        - 段内直接近转移```JMP  NEAR  PTR  OPR``` 16/32位</span><br><span class="line">        - 段内间接近转移```JMP  WORD  PTR  OPR``` EA通过OPR间接获得</span><br><span class="line">        - 段间直接转移```JMP  FAR  PTR  OPR``` OPR 直接给出目标指令所在段的16/32位段基地址和段内有效地址EA</span><br><span class="line">        - 段间间接转移```JMP  DWORD  PTR  OPR``` 间接存储器寻址</span><br><span class="line">- 条件转移指令</span><br><span class="line">    - JNx=否定</span><br><span class="line">    - 根据单个条件标志情况转移</span><br><span class="line">        - JZ/JE JNZ/JNE：结果为0</span><br><span class="line">        - JS JNS：结果小于0</span><br><span class="line">        - JO JNO：结果溢出</span><br><span class="line">        - JP JNP：结果中1的个数为偶数个</span><br><span class="line">        - JC/JB JNC/JNB：结果进位/借位</span><br><span class="line">    - 比较两个**无符号数**，根据结果转移（A高于，B低于，E等于）</span><br><span class="line">        - JB JNAE JC: &lt;</span><br><span class="line">        - JNB JAE JNC: &gt;=</span><br><span class="line">        - JBE JNA: &lt;=</span><br><span class="line">        - JNBE JA: &gt;</span><br><span class="line">    - 比较两个**带符号数**，根据结果转移（G大于，L小于，E等于）</span><br><span class="line">        - JG JNLE: &gt;</span><br><span class="line">        - JGE JNL: &gt;=</span><br><span class="line">        - JL JNGE: &lt;</span><br><span class="line">        - JLE JNG: &lt;=</span><br><span class="line">    - 测试CX或ECX的值，为0则转移</span><br><span class="line">        - JCXZ</span><br><span class="line">        - JECXZ</span><br><span class="line">- 循环指令</span><br><span class="line">    - LOOP</span><br><span class="line">        - 用CX/ECX作为循环次数的计数器</span><br><span class="line">        - LOOP</span><br><span class="line">            - dec cx</span><br><span class="line">            - jnz start</span><br><span class="line">    - LOOPZ/LOOPE 相等循环指令</span><br><span class="line">        - 若CX≠0且ZF=1，转向标号出继续执行循环体</span><br><span class="line">        - LOOPE</span><br><span class="line">            - jnz next</span><br><span class="line">            - dec cx</span><br><span class="line">            - jnz start</span><br><span class="line">    - LOOPNZ/LOOPNE</span><br><span class="line">- 子程序调用和返回指令</span><br><span class="line">    - CALL 子程序调用</span><br><span class="line">        - 与JMP不同：CALL先保存当前CS:IP内容到堆栈，然后执行JMP功能</span><br><span class="line">    - RET 子程序返回</span><br><span class="line">        - 段内/间带立即数近/远返回```RET  EXP</span><br></pre></td></tr></table></figure></p>
+<li>串重复前缀<ul>
+<li>REP：重复<ul>
+<li>例：<code>REP MOVSB ES:[DI], DS:[SI]</code></li>
+</ul>
 </li>
-<li><p>返回到被调用处，并隐含执行<figure class="highlight plain"><figcaption><span>IP/EIP```(段间则还有```POP CS```)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 中断与中断返回指令（软中断）</span><br><span class="line">    - INT 中断请求</span><br><span class="line">        - ```INT n</span><br></pre></td></tr></table></figure></p>
+<li>REPE/REPZ：相等/为0则重复<ul>
+<li>1.若CX=0（计数）或ZF=0（不相等），则结束重复</li>
+<li>2.否则修改计数器CX-1，执行串操作，重复</li>
+</ul>
 </li>
-<li><p>将当前FLAGS、CS、IP依次压入堆栈</p>
+<li>REPNE/PEPNZ：不相等/不为0则重复</li>
+</ul>
 </li>
-<li><p>IF=0，TF=0，AC=0</p>
-</li>
-<li><p>从中断向量表中取出第n类中断向量（(4n,4n+1)→IP，(4n+2,4n+3)→CS），执行中断处理子程序</p>
+</ul>
+<h3><span id="控制转移指令">控制转移指令</span></h3><ul>
+<li>无条件转移指令<ul>
+<li>JMP<ul>
+<li>段内直接短转移<code>JMP  SHORT  OPR</code> 8位</li>
+<li>段内直接近转移<code>JMP  NEAR  PTR  OPR</code> 16/32位</li>
+<li>段内间接近转移<code>JMP  WORD  PTR  OPR</code> EA通过OPR间接获得</li>
+<li>段间直接转移<code>JMP  FAR  PTR  OPR</code> OPR 直接给出目标指令所在段的16/32位段基地址和段内有效地址EA</li>
+<li>段间间接转移<code>JMP  DWORD  PTR  OPR</code> 间接存储器寻址</li>
+</ul>
 </li>
 </ul>
 </li>
-<li><p>INTO 如溢出则中断</p>
+<li>条件转移指令<ul>
+<li>JNx=否定</li>
+<li>根据单个条件标志情况转移<ul>
+<li>JZ/JE JNZ/JNE：结果为0</li>
+<li>JS JNS：结果小于0</li>
+<li>JO JNO：结果溢出</li>
+<li>JP JNP：结果中1的个数为偶数个</li>
+<li>JC/JB JNC/JNB：结果进位/借位</li>
+</ul>
 </li>
-<li><p>IRET 中断返回</p>
-<ul>
+<li>比较两个<strong>无符号数</strong>，根据结果转移（A高于，B低于，E等于）<ul>
+<li>JB JNAE JC: &lt;</li>
+<li>JNB JAE JNC: &gt;=</li>
+<li>JBE JNA: &lt;=</li>
+<li>JNBE JA: &gt;</li>
+</ul>
+</li>
+<li>比较两个<strong>带符号数</strong>，根据结果转移（G大于，L小于，E等于）<ul>
+<li>JG JNLE: &gt;</li>
+<li>JGE JNL: &gt;=</li>
+<li>JL JNGE: &lt;</li>
+<li>JLE JNG: &lt;=</li>
+</ul>
+</li>
+<li>测试CX或ECX的值，为0则转移<ul>
+<li>JCXZ</li>
+<li>JECXZ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>循环指令<ul>
+<li>LOOP<ul>
+<li>用CX/ECX作为循环次数的计数器</li>
+<li>LOOP<ul>
+<li>dec cx</li>
+<li>jnz start</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LOOPZ/LOOPE 相等循环指令<ul>
+<li>若CX≠0且ZF=1，转向标号出继续执行循环体</li>
+<li>LOOPE<ul>
+<li>jnz next</li>
+<li>dec cx</li>
+<li>jnz start</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LOOPNZ/LOOPNE</li>
+</ul>
+</li>
+<li>子程序调用和返回指令<ul>
+<li>CALL 子程序调用<ul>
+<li>与JMP不同：CALL先保存当前CS:IP内容到堆栈，然后执行JMP功能</li>
+</ul>
+</li>
+<li>RET 子程序返回<ul>
+<li>段内/间带立即数近/远返回<code>RET  EXP</code></li>
+<li>返回到被调用处，并隐含执行<code>POP IP/EIP</code>(段间则还有<code>POP CS</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>中断与中断返回指令（软中断）<ul>
+<li>INT 中断请求<ul>
+<li><code>INT n</code></li>
+<li>将当前FLAGS、CS、IP依次压入堆栈</li>
+<li>IF=0，TF=0，AC=0</li>
+<li>从中断向量表中取出第n类中断向量（(4n,4n+1)→IP，(4n+2,4n+3)→CS），执行中断处理子程序</li>
+</ul>
+</li>
+<li>INTO 如溢出则中断</li>
+<li>IRET 中断返回<ul>
 <li>恢复指针IP、CS、FLAGS</li>
 <li>返回原程序断点继续执行</li>
 </ul>
 </li>
-<li><p>特别注意：</p>
-<ul>
+<li>特别注意：<ul>
 <li>子程序中PUSH和POP需一对一执行</li>
 <li>子程序中需要使用寄存器时，必须在子程序开始推入堆栈，子程序返回指令前出栈，以按顺序恢复寄存器内容</li>
 </ul>
@@ -468,68 +797,117 @@
 <li>处理机控制指令<br><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/08.png" alt="处理机控制指令"></li>
 </ul>
 <h2><span id="寻址方式">寻址方式</span></h2><h3><span id="与数据有关的寻址方式">与数据有关的寻址方式</span></h3><ul>
-<li><p>立即寻址：</p>
-<ul>
+<li>立即寻址：<ul>
 <li>操作数在指令中给出</li>
 <li>src与dst字长一致</li>
 <li>仅用于src字段</li>
-<li>例：<figure class="highlight plain"><figcaption><span>AL,  5```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 寄存器寻址</span><br><span class="line">    - 操作数在指定的寄存器中</span><br><span class="line">    - src与dst字长一致</span><br><span class="line">    - **CS不能用MOV指令改变**</span><br><span class="line">    - 例：```MOV   AL,  BH</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>MOV   AL,  5</code></li>
 </ul>
 </li>
-<li><p><span id="jp4">后几个是存储器寻址，操作数存放在存储器的单元中</span></p>
-<ul>
+<li>寄存器寻址<ul>
+<li>操作数在指定的寄存器中</li>
+<li>src与dst字长一致</li>
+<li><strong>CS不能用MOV指令改变</strong></li>
+<li>例：<code>MOV   AL,  BH</code></li>
+</ul>
+</li>
+<li><span id="jp4">后几个是存储器寻址，操作数存放在存储器的单元中</span><ul>
 <li>2-5中，当指令寻址使用<strong>BP</strong>，则计算物理地址时约定段为<strong>SS</strong></li>
 <li>其它情况下约定段为<strong>DS</strong></li>
 </ul>
 </li>
-<li><p>直接寻址：</p>
-<ul>
+<li>直接寻址：<ul>
 <li><strong>EA=[位移量]</strong></li>
 <li><a href="#jp3">有效地址EA</a>由指令直接给出</li>
 <li>直接寻址的段寄存器约定为数据段DS</li>
 <li>物理地址：<strong>PA=DS×10H+EA</strong></li>
-<li>例：<figure class="highlight plain"><figcaption><span>BX,  DS:[2100H]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 寄存器间接寻址</span><br><span class="line">    - **EA=[基址]或EA=[变址]**</span><br><span class="line">    - 偏移地址EA在指令指定的基址寄存器BX、BP或变址寄存器SI、DI中</span><br><span class="line">    - 例：```MOV   CX,  [SI]</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>MOV   BX,  DS:[2100H]</code></li>
 </ul>
 </li>
-<li><p>寄存器相对寻址</p>
-<ul>
+<li>寄存器间接寻址<ul>
+<li><strong>EA=[基址]或EA=[变址]</strong></li>
+<li>偏移地址EA在指令指定的基址寄存器BX、BP或变址寄存器SI、DI中</li>
+<li>例：<code>MOV   CX,  [SI]</code></li>
+</ul>
+</li>
+<li>寄存器相对寻址<ul>
 <li><strong>EA=[基址+位移量]或EA=[变址+位移量]</strong></li>
 <li>操作数的偏移地址由指令指定的寄存器BX、BP、SI、DI和指令中给定的位移量相加得到</li>
-<li>例：<figure class="highlight plain"><figcaption><span>AX,  NUM[BX]```物理地址：DS×10H+BX+NUM</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- 基址变址寻址</span><br><span class="line">    - **EA=[基址+变址]**</span><br><span class="line">    - 偏移地址由指令指定的基址寄存器BX、BP与变址寄存器SI、DI内容相加</span><br><span class="line">    - 例：```MOV   AX,  [BX][SI]```或```MOV   AX,  [BX+SI]```物理地址：DS×16+BX+SI</span><br><span class="line">- 相对基址变址寻址</span><br><span class="line">    - **EA=[基址+变址+位移量]**</span><br><span class="line">    - 偏移地址由指令指定的基址寄存器BX、BP与变址寄存器SI、DI与位移量内容相加</span><br><span class="line">    - 例：```MOV   AX,  MASK[BX][SI]</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>MOV   AX,  NUM[BX]</code>物理地址：DS×10H+BX+NUM</li>
 </ul>
 </li>
-<li><p>下面为32位地址寻址方式</p>
+<li>基址变址寻址<ul>
+<li><strong>EA=[基址+变址]</strong></li>
+<li>偏移地址由指令指定的基址寄存器BX、BP与变址寄存器SI、DI内容相加</li>
+<li>例：<code>MOV   AX,  [BX][SI]</code>或<code>MOV   AX,  [BX+SI]</code>物理地址：DS×16+BX+SI</li>
+</ul>
 </li>
-<li><p>比例变址寻址方式</p>
-<ul>
+<li>相对基址变址寻址<ul>
+<li><strong>EA=[基址+变址+位移量]</strong></li>
+<li>偏移地址由指令指定的基址寄存器BX、BP与变址寄存器SI、DI与位移量内容相加</li>
+<li>例：<code>MOV   AX,  MASK[BX][SI]</code></li>
+</ul>
+</li>
+<li>下面为32位地址寻址方式</li>
+<li>比例变址寻址方式<ul>
 <li>EA=[变址*比例因子+位移量]</li>
-<li>例：<figure class="highlight plain"><figcaption><span>EAX,   NUM[ESI×8]```物理地址：DS×10H+ESI×8+NUM</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 基址比例变址寻址方式</span><br><span class="line">    - EA=[基址+变址*比例因子]</span><br><span class="line">    - 例：```MOV   EAX,  [EBX][ESI*2]</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>MOV   EAX,   NUM[ESI×8]</code>物理地址：DS×10H+ESI×8+NUM</li>
 </ul>
 </li>
-<li><p>相对基址比例变址寻址方式</p>
-<ul>
+<li>基址比例变址寻址方式<ul>
+<li>EA=[基址+变址*比例因子]</li>
+<li>例：<code>MOV   EAX,  [EBX][ESI*2]</code></li>
+</ul>
+</li>
+<li>相对基址比例变址寻址方式<ul>
 <li>EA=[基址+变址*比例因子+位移量]</li>
-<li>例：<figure class="highlight plain"><figcaption><span>EAX,  [EBX][ESI*2+NUM]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 与转移地址有关的寻址方式</span><br><span class="line">如何确定转移指令及CALL指令的转向目标地址</span><br><span class="line">- 段内转移：转移指令和目的地地址在同一代码段内（CS不变，求新IP）</span><br><span class="line">- 段间转移：转移指令和目的地地址不在同一代码段内（新CS、IP）</span><br><span class="line"></span><br><span class="line">寻址方式：</span><br><span class="line">- 段内直接寻址</span><br><span class="line">    - 转向的有效地址EA是当前IP寄存器的内容和指令中指定的8位或16位位移量之和</span><br><span class="line">    - IP~新~=IP~当前~+skip数值</span><br><span class="line">    - 例：```JMP   000F</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>MOV   EAX,  [EBX][ESI*2+NUM]</code></li>
 </ul>
 </li>
-<li><p>段内间接寻址</p>
+</ul>
+<h3><span id="与转移地址有关的寻址方式">与转移地址有关的寻址方式</span></h3><p>如何确定转移指令及CALL指令的转向目标地址</p>
 <ul>
+<li>段内转移：转移指令和目的地地址在同一代码段内（CS不变，求新IP）</li>
+<li>段间转移：转移指令和目的地地址不在同一代码段内（新CS、IP）</li>
+</ul>
+<p>寻址方式：</p>
+<ul>
+<li>段内直接寻址<ul>
+<li>转向的有效地址EA是当前IP寄存器的内容和指令中指定的8位或16位位移量之和</li>
+<li>IP<del>新</del>=IP<del>当前</del>+skip数值</li>
+<li>例：<code>JMP   000F</code></li>
+</ul>
+</li>
+<li>段内间接寻址<ul>
 <li>新IP内容是在寄存器或存储单元的内容</li>
 <li>跳转指令中给出寄存器名称或存储单元的有效地址</li>
-<li>例：<figure class="highlight plain"><figcaption><span>SI``` </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 段间直接寻址</span><br><span class="line">    - 指令中直接提供转向的段地址和偏移地址（取代CS、IP）</span><br><span class="line">    - 新指令物理地址=CS~新~×10H+IP~新~</span><br><span class="line">    - 例：```JMP   0706：0000</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>JMP   SI</code> </li>
 </ul>
 </li>
-<li><p>段间间接寻址</p>
-<ul>
+<li>段间直接寻址<ul>
+<li>指令中直接提供转向的段地址和偏移地址（取代CS、IP）</li>
+<li>新指令物理地址=CS<del>新</del>×10H+IP<del>新</del></li>
+<li>例：<code>JMP   0706：0000</code></li>
+</ul>
+</li>
+<li>段间间接寻址<ul>
 <li>用存储器中的两个相继字内容来取代CS、IP</li>
 <li>新指令物理地址=CS<del>新</del>×10H+IP<del>新</del></li>
-<li>例：<figure class="highlight plain"><figcaption><span>FAR  [BX]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">条件转移只能使用段内直接寻址，=，无条件转移JMP和无条件子程序调用四种皆可</span><br><span class="line"></span><br><span class="line"># 第四章 汇编语言程序格式--伪操作（伪指令）</span><br><span class="line"></span><br><span class="line">汇编语言指令：</span><br><span class="line">- 机器指令：每条指令语句都生成机器指令代码，各对应一种CPU操作，在程序运行时由计算机CPU执行（第三章）</span><br><span class="line">- 伪指令/伪操作：在汇编阶段，汇编器执行。在对源程序汇编、连接期间仅由汇编程序、连接程序按功能说明处理，以完成处理器选择、定义程序模式、定义数据、分配存储区、指示程序开始/结束等（第四章）</span><br><span class="line">- 宏指令：自定义宏指令和标准宏指令，一条对应一组机器指令，汇编时展开（第七章）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## **数据定义**伪指令</span><br><span class="line">为变量数据分配存储单元，并设置初始值/预留空间。</span><br><span class="line">```[变量名] 数据类型 表达式</span><br></pre></td></tr></table></figure></li>
+<li>例：<code>JMP   FAR  [BX]</code></li>
 </ul>
 </li>
-<li><p>变量名：可有可无，是变量的符号地址</p>
-</li>
-<li><p>数据类型：</p>
+</ul>
+<p>条件转移只能使用段内直接寻址，=，无条件转移JMP和无条件子程序调用四种皆可</p>
+<h1><span id="第四章-汇编语言程序格式伪操作伪指令">第四章 汇编语言程序格式–伪操作（伪指令）</span></h1><p>汇编语言指令：</p>
 <ul>
+<li>机器指令：每条指令语句都生成机器指令代码，各对应一种CPU操作，在程序运行时由计算机CPU执行（第三章）</li>
+<li>伪指令/伪操作：在汇编阶段，汇编器执行。在对源程序汇编、连接期间仅由汇编程序、连接程序按功能说明处理，以完成处理器选择、定义程序模式、定义数据、分配存储区、指示程序开始/结束等（第四章）</li>
+<li>宏指令：自定义宏指令和标准宏指令，一条对应一组机器指令，汇编时展开（第七章）</li>
+</ul>
+<h2><span id="数据定义伪指令"><strong>数据定义</strong>伪指令</span></h2><p>为变量数据分配存储单元，并设置初始值/预留空间。<br><code>[变量名] 数据类型 表达式</code></p>
+<ul>
+<li>变量名：可有可无，是变量的符号地址</li>
+<li>数据类型：<ul>
 <li>DB：字节</li>
 <li>DW：字/2字节</li>
 <li>DD：双字/4字节</li>
@@ -538,23 +916,21 @@
 <li>DT：10字节</li>
 </ul>
 </li>
-<li><p>表达式：</p>
-<ul>
+<li>表达式：<ul>
 <li>具体数值常量，数值表达式，字符串常量，地址表达式等</li>
 <li>？：未初始化数据</li>
 </ul>
 </li>
-<li><p>指令中<strong>type PTR 变量名</strong>指定的类型属性优先于此处声明的属性</p>
-<ul>
+<li>指令中<strong>type PTR 变量名</strong>指定的类型属性优先于此处声明的属性<ul>
 <li>type：BYTE WORD DWORD…</li>
 </ul>
 </li>
-<li><p>也可以用<figure class="highlight plain"><figcaption><span>LABEL  type```定义属性</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">表达式复制**EQU**</span><br><span class="line">```表达式名称  EQU  表达式</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>表达式中不允许出现自身</p>
-</li>
-<li><p>定义常数，<strong>不分配存储单元</strong></p>
-</li>
+<li>也可以用<code>变量名  LABEL  type</code>定义属性</li>
+</ul>
+<p>表达式复制<strong>EQU</strong><br><code>表达式名称  EQU  表达式</code></p>
+<ul>
+<li>表达式中不允许出现自身</li>
+<li>定义常数，<strong>不分配存储单元</strong></li>
 </ul>
 <p><span id="jp6">地址计数器</span></p>
 <ul>
@@ -568,43 +944,83 @@
 </li>
 </ul>
 <h2><span id="操作数运算符">操作数运算符</span></h2><ul>
-<li><p>算术操作符：+，-，*，/，MOD</p>
-</li>
-<li><p>逻辑与移位操作符：</p>
-<ul>
+<li>算术操作符：+，-，*，/，MOD</li>
+<li>逻辑与移位操作符：<ul>
 <li>逻辑：AND，OR，XOR，NOT</li>
 <li>移位：SHL，SHR</li>
 </ul>
 </li>
-<li><p>关系操作符</p>
+<li>关系操作符<ul>
+<li>EQ，NE，LT，GT，LE，GE</li>
+<li>操作数为数字/同一段内两存储器地址</li>
+<li>结果为真：0ffffH；结果为假：0000H</li>
+<li>例：<code>MOV FID, (OFFSET X-OFFSET Y) LE 128</code></li>
+</ul>
+</li>
+<li>数值回送操作符<ul>
+<li>把一些特征/存储器地址的一部分作为数值回送</li>
+<li><strong>OFFSET/SEG</strong>：（变量/标号）回送偏移地址/段基地址</li>
+<li>TYPE：（变量/标号）DB→1，DW→2…</li>
+<li>LENGTH：（变量）回送由DUP定义的变量的数据个数，其他情况回送1</li>
+<li>SIZE：（变量）LENGTH*TYPE</li>
+</ul>
+</li>
+<li>属性操作符<ul>
+<li><strong>PTR</strong>：<code>类型 PTR 地址表达式</code>指定地址表达式的类型<ul>
+<li>例：<code>WORD PTR [BX]</code></li>
+</ul>
+</li>
+<li>THIS：类型操作符<code>THIS 类型</code></li>
+<li>SHORT：标号操作符，修饰JMP指令中转向地址的属性</li>
+<li>HIGH，LOW：字节分离操作符<ul>
+<li>LOW ARRAY = BYTE PTR [ARRAY]</li>
+<li>HIGH ARRAY = BYTE PTR [ARRAY+1]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="程序命名结束和过程伪指令">程序命名，结束和过程伪指令</span></h2><ul>
+<li><p>命名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NAME   模块名</span><br><span class="line">TITLE  标题名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>结束：<code>END  ([执行的起始地址])</code> <strong>只有主程序模块的END后加起始地址</strong></p>
+</li>
+<li><p>过程定义：</p>
 <ul>
-<li><p>EQ，NE，LT，GT，LE，GE</p>
+<li>类型：NEAR/FAR<ul>
+<li>NEAR（或缺省）：该过程只能在段内被调用</li>
+<li>FAR：可以在段内/段间被调用</li>
+</ul>
 </li>
-<li><p>操作数为数字/同一段内两存储器地址</p>
-</li>
-<li><p>结果为真：0ffffH；结果为假：0000H</p>
-</li>
-<li><p>例：<figure class="highlight plain"><figcaption><span>FID, (OFFSET X-OFFSET Y) LE 128```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- 数值回送操作符</span><br><span class="line">    - 把一些特征/存储器地址的一部分作为数值回送</span><br><span class="line">    - **OFFSET/SEG**：（变量/标号）回送偏移地址/段基地址</span><br><span class="line">    - TYPE：（变量/标号）DB→1，DW→2...</span><br><span class="line">    - LENGTH：（变量）回送由DUP定义的变量的数据个数，其他情况回送1</span><br><span class="line">    - SIZE：（变量）LENGTH*TYPE</span><br><span class="line">- 属性操作符</span><br><span class="line">    - **PTR**：```类型 PTR 地址表达式```指定地址表达式的类型</span><br><span class="line">        - 例：```WORD PTR [BX]</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>THIS：类型操作符<figure class="highlight plain"><figcaption><span>类型```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    - SHORT：标号操作符，修饰JMP指令中转向地址的属性</span><br><span class="line">    - HIGH，LOW：字节分离操作符</span><br><span class="line">        - LOW ARRAY = BYTE PTR [ARRAY]</span><br><span class="line">        - HIGH ARRAY = BYTE PTR [ARRAY+1]</span><br><span class="line"></span><br><span class="line">## 程序命名，结束和过程伪指令</span><br><span class="line">- 命名：</span><br></pre></td></tr></table></figure></p>
+<li><strong>主过程必须是FAR型</strong></li>
+<li>子程序涉及到RET返回，用过程方式定义<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">过程名   PROC  [类型]</span><br><span class="line">    ...</span><br><span class="line">过程名   END</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 </li>
 </ul>
-<p>NAME   模块名<br>TITLE  标题名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- 结束：```END  ([执行的起始地址])``` **只有主程序模块的END后加起始地址**</span><br><span class="line">- 过程定义：</span><br><span class="line">    - 类型：NEAR/FAR</span><br><span class="line">        - NEAR（或缺省）：该过程只能在段内被调用</span><br><span class="line">        - FAR：可以在段内/段间被调用</span><br><span class="line">    - **主过程必须是FAR型**</span><br><span class="line">    - 子程序涉及到RET返回，用过程方式定义</span><br></pre></td></tr></table></figure>
-
-<p>过程名   PROC  [类型]<br>    …<br>过程名   END</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 段定义伪指令</span><br><span class="line">### &lt;span id=&quot;jp7&quot;&gt;segment伪指令&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>segment_name segment ([定位类型][组合类型][使用类型][类别])<br>    …<br>segment_name ends</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 数据段、附加段、堆栈段：**只包括伪指令语句**</span><br><span class="line">- 代码段可包括机器指令、伪指令、宏指令</span><br><span class="line">- 定位类型：BYTE，WORD，DWORD，PARA，PAGE（指定段在存储器分配时的对齐属性）</span><br><span class="line">- 组合类型：PRIVATE，PUBLIC，COMMMON，AT，STACK，MEMORY（程序连接时段的合并的方式）</span><br><span class="line">    - PUBLIC：同名段按指定次序连接形成一个段</span><br><span class="line">    - COMMON：同名段重叠形成一个段</span><br><span class="line">    - STACK：同名段形成一个堆栈，原有段之间无间隔</span><br><span class="line">- 使用类型：USE16</span><br><span class="line">- 类别：连接时组成短组的类型名（同类别段装配在相邻位置，组成段组）</span><br><span class="line">- 定义堆栈举例</span><br></pre></td></tr></table></figure>
-
-<p>stack_seg segment<br>    dw   40h  dup(?)<br>    tos label word<br>stasck_seg ends</p>
-<p>code_seg segment<br>    …<br>    mov   ax,  stack_egg<br>    mov   ss,  ax<br>    mov   ap,  offset tos<br>    …<br>code_seg end</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### ASSUME伪指令</span><br><span class="line">- 在代码段指明定义的段与段寄存器的对应关系</span><br><span class="line">- ```ASSUME CS:code_seg, DS:data_seg</span><br></pre></td></tr></table></figure>
+<h2><span id="段定义伪指令">段定义伪指令</span></h2><h3><span id="segment伪指令"><span id="jp7">segment伪指令</span></span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">segment_name segment ([定位类型][组合类型][使用类型][类别])</span><br><span class="line">    ...</span><br><span class="line">segment_name ends</span><br></pre></td></tr></table></figure>
 
 <ul>
+<li>数据段、附加段、堆栈段：<strong>只包括伪指令语句</strong></li>
+<li>代码段可包括机器指令、伪指令、宏指令</li>
+<li>定位类型：BYTE，WORD，DWORD，PARA，PAGE（指定段在存储器分配时的对齐属性）</li>
+<li>组合类型：PRIVATE，PUBLIC，COMMMON，AT，STACK，MEMORY（程序连接时段的合并的方式）<ul>
+<li>PUBLIC：同名段按指定次序连接形成一个段</li>
+<li>COMMON：同名段重叠形成一个段</li>
+<li>STACK：同名段形成一个堆栈，原有段之间无间隔</li>
+</ul>
+</li>
+<li>使用类型：USE16</li>
+<li>类别：连接时组成短组的类型名（同类别段装配在相邻位置，组成段组）</li>
+<li>定义堆栈举例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">stack_seg segment</span><br><span class="line">    dw   40h  dup(?)</span><br><span class="line">    tos label word</span><br><span class="line">stasck_seg ends</span><br><span class="line"></span><br><span class="line">code_seg segment</span><br><span class="line">    ...</span><br><span class="line">    mov   ax,  stack_egg</span><br><span class="line">    mov   ss,  ax</span><br><span class="line">    mov   ap,  offset tos</span><br><span class="line">    ...</span><br><span class="line">code_seg end</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3><span id="assume伪指令">ASSUME伪指令</span></h3><ul>
+<li>在代码段指明定义的段与段寄存器的对应关系</li>
+<li><code>ASSUME CS:code_seg, DS:data_seg</code></li>
 <li>放在引用段寄存器之前，通常为代码段第一个语句位置</li>
 <li>ASSUME语句不赋值，只是<strong>约定</strong></li>
 </ul>
@@ -672,22 +1088,54 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">结构名 STRUC</span><br><span class="line">    变量1   DB  ?</span><br><span class="line">    变量2   DW  ?</span><br><span class="line">    变量3   DD  ?</span><br><span class="line">    ...</span><br><span class="line">结构名 ENDS</span><br><span class="line"></span><br><span class="line">访问：结构名.变量1</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>本质上，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 定义了数据存储结构格式和相关变量指针说明，编程、阅读、修改方便</span><br><span class="line"></span><br><span class="line">## 子程序嵌套与递归的区别</span><br><span class="line">- 嵌套：一个子程序作为调用程序，调用**另一个**子程序</span><br><span class="line">- 递归：子程序调用的子程序是它**自身**（嵌套的特殊情况）</span><br><span class="line">![一个递归](16.png)</span><br><span class="line">![不用STRUC的方法](17.png)</span><br><span class="line"></span><br><span class="line"># 第七章 高级汇编语言技术</span><br><span class="line"></span><br><span class="line">## 宏汇编</span><br></pre></td></tr></table></figure></li>
+<li>本质上，<code>.xxx</code>代表了结构体首址的位移量</li>
+<li>定义了数据存储结构格式和相关变量指针说明，编程、阅读、修改方便</li>
 </ul>
-<p>macro_name MACRO [哑元表]<br>    [LOCAL 标号表]<br>    …<br>ENDM</p>
-<p>调用：macro_name [实元表]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 哑元表：形式参数，宏定义中使用的变量参数</span><br><span class="line">- 标号：如果宏定义体有一个或多个标号，则必须用LOCAL伪操作列出所有标号</span><br><span class="line">- 实元：常数、寄存器、存储单元、地址、表达式、操作码……</span><br><span class="line">- 对宏定义指令的调用：**先定义后调用**</span><br><span class="line"></span><br><span class="line">### 宏汇编操作符</span><br><span class="line">- a&amp;b：合并ab两个符号</span><br><span class="line">- ;;：注释（在宏展开时不计）</span><br><span class="line">- %：展开时将%后面的表达式立即求值转换为数字</span><br><span class="line">- :REQ：指定某个变元在调用的时候必须有对应的实元</span><br><span class="line">- :=：为宏变元提供缺省值```A:=&lt;10&gt;</span><br></pre></td></tr></table></figure>
+<h2><span id="子程序嵌套与递归的区别">子程序嵌套与递归的区别</span></h2><ul>
+<li>嵌套：一个子程序作为调用程序，调用<strong>另一个</strong>子程序</li>
+<li>递归：子程序调用的子程序是它<strong>自身</strong>（嵌套的特殊情况）<br><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/16.png" alt="一个递归"><br><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/17.png" alt="不用STRUC的方法"></li>
+</ul>
+<h1><span id="第七章-高级汇编语言技术">第七章 高级汇编语言技术</span></h1><h2><span id="宏汇编">宏汇编</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">macro_name MACRO [哑元表]</span><br><span class="line">    [LOCAL 标号表]</span><br><span class="line">    ...</span><br><span class="line">ENDM</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">调用：macro_name [实元表]</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>哑元表：形式参数，宏定义中使用的变量参数</li>
+<li>标号：如果宏定义体有一个或多个标号，则必须用LOCAL伪操作列出所有标号</li>
+<li>实元：常数、寄存器、存储单元、地址、表达式、操作码……</li>
+<li>对宏定义指令的调用：<strong>先定义后调用</strong></li>
+</ul>
+<h3><span id="宏汇编操作符">宏汇编操作符</span></h3><ul>
+<li>a&amp;b：合并ab两个符号</li>
+<li>;;：注释（在宏展开时不计）</li>
+<li>%：展开时将%后面的表达式立即求值转换为数字</li>
+<li>:REQ：指定某个变元在调用的时候必须有对应的实元</li>
+<li>:=：为宏变元提供缺省值<code>A:=&lt;10&gt;</code></li>
+</ul>
 <h3><span id="local伪操作">LOCAL伪操作</span></h3><ul>
 <li><p>避免多次调用宏定义时标号出现多重定义</p>
 </li>
 <li><p>紧跟MACRO操作后面<br><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/18.png" alt="LOCAL伪操作"></p>
 </li>
-<li><p>删除宏定义<figure class="highlight plain"><figcaption><span>macro_name[,macro_name,...]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 宏定义与子程序的异同</span><br><span class="line">- 子程序：在**程序执行期间**被调用，只占用自身大小的一段空间</span><br><span class="line">    - 优点：模块化，**节省内存**，可被**多次调用**，编程效率高</span><br><span class="line">    - 缺点：转子、返回、保存、恢复寄存器、参数的传送等，增加了程序执行的额外开销，即操作所**消耗的时间**</span><br><span class="line">    - 适用于子功能**代码较长**、**调用比较频繁**的情况</span><br><span class="line">- 宏汇编：在**汇编期间**被展开，每调用一次就展开一次</span><br><span class="line">    - 优点：参数传送简单，**执行效率高**</span><br><span class="line">    - 缺点：**不节省空间**</span><br><span class="line">    - 适用于子功能**代码较短**，传递**参数较多**的情况</span><br><span class="line"></span><br><span class="line">## 重复汇编</span><br><span class="line">连续产生完全相同或基本相同的一组代码。</span><br></pre></td></tr></table></figure></p>
+<li><p>删除宏定义<code>PURGE  macro_name[,macro_name,...]</code></p>
 </li>
 </ul>
-<p>;重复伪操作REPT<br>REPT 重复次数<br>    …<br>ENDM</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">;不定重复伪操作IRP</span><br><span class="line">IRP 哑元,&lt;自变量表&gt;</span><br><span class="line">    ...</span><br><span class="line">ENDM</span><br><span class="line">;每次重复用自变量表中的一项取代哑元</span><br><span class="line">;重复次数=自由变量个数</span><br></pre></td></tr></table></figure>
+<h2><span id="宏定义与子程序的异同">宏定义与子程序的异同</span></h2><ul>
+<li>子程序：在<strong>程序执行期间</strong>被调用，只占用自身大小的一段空间<ul>
+<li>优点：模块化，<strong>节省内存</strong>，可被<strong>多次调用</strong>，编程效率高</li>
+<li>缺点：转子、返回、保存、恢复寄存器、参数的传送等，增加了程序执行的额外开销，即操作所<strong>消耗的时间</strong></li>
+<li>适用于子功能<strong>代码较长</strong>、<strong>调用比较频繁</strong>的情况</li>
+</ul>
+</li>
+<li>宏汇编：在<strong>汇编期间</strong>被展开，每调用一次就展开一次<ul>
+<li>优点：参数传送简单，<strong>执行效率高</strong></li>
+<li>缺点：<strong>不节省空间</strong></li>
+<li>适用于子功能<strong>代码较短</strong>，传递<strong>参数较多</strong>的情况</li>
+</ul>
+</li>
+</ul>
+<h2><span id="重复汇编">重复汇编</span></h2><p>连续产生完全相同或基本相同的一组代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">;重复伪操作REPT</span><br><span class="line">REPT 重复次数</span><br><span class="line">    ...</span><br><span class="line">ENDM</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;不定重复伪操作IRP</span><br><span class="line">IRP 哑元,&lt;自变量表&gt;</span><br><span class="line">    ...</span><br><span class="line">ENDM</span><br><span class="line">;每次重复用自变量表中的一项取代哑元</span><br><span class="line">;重复次数=自由变量个数</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;IRPC伪操作：用字符串字符替换哑元</span><br><span class="line">IRPC  哑元，字符串</span><br><span class="line">    ...</span><br><span class="line">ENDM</span><br><span class="line">;每次重复用字符串中的一个字符取代</span><br><span class="line">;重复次数=字符串字符数</span><br></pre></td></tr></table></figure>
 
@@ -696,18 +1144,13 @@
 
 <p><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/19.png" alt="条件指令表"><br>IF和IFE的表达式中可以使用：EQ NE LT LE GT GE</p>
 <h1><span id="第八章-输入输出程序设计">第八章  输入输出程序设计</span></h1><h2><span id="in-out指令的用法">IN OUT指令的用法</span></h2><ul>
-<li><p>接口：输入输出设备通过硬件接口/控制器/CPU，由一组寄存器组成。</p>
-</li>
-<li><p>I/O端口地址：为了访问接口上的寄存器，系统给寄存器分配专门的存取访问地址</p>
-</li>
-<li><p>8086中，I/O端口地址和存储单元的地址是各自的独立的，分占两不同地址空间</p>
-</li>
-<li><p>输入指令：<figure class="highlight plain"><figcaption><span>累加器, 端口地址```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 输出指令：```OUT  端口地址，累加器</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>累加器：<strong>AX，AL</strong></p>
-</li>
-<li><p>端口地址：直接寻址PORT；寄存器间接DX</p>
-</li>
+<li>接口：输入输出设备通过硬件接口/控制器/CPU，由一组寄存器组成。</li>
+<li>I/O端口地址：为了访问接口上的寄存器，系统给寄存器分配专门的存取访问地址</li>
+<li>8086中，I/O端口地址和存储单元的地址是各自的独立的，分占两不同地址空间</li>
+<li>输入指令：<code>IN  累加器, 端口地址</code></li>
+<li>输出指令：<code>OUT  端口地址，累加器</code></li>
+<li>累加器：<strong>AX，AL</strong></li>
+<li>端口地址：直接寻址PORT；寄存器间接DX</li>
 </ul>
 <h2><span id="中断传送方式工作机制与编程方法">中断传送方式工作机制与编程方法</span></h2><ul>
 <li><p>硬件中断：外设控制器或协处理器引起的中断<br><img src="//0wxzg0.github.io/2020/06/26/汇编语言复习/20.png" alt="硬件中断"></p>
@@ -762,7 +1205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/26/汇编语言复习/" data-id="ckeaxgram000mdgvxmmge4dk3" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/26/汇编语言复习/" data-id="ckeay2sky000mi4vxqnq4r7nc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/汇编/">汇编</a></li></ul>
