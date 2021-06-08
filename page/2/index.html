@@ -62,6 +62,186 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-「龍が如く極」白金留念" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/23/「龍が如く極」白金留念/" class="article-date">
+  <time datetime="2020-08-23T14:45:21.000Z" itemprop="datePublished">2020-08-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/23/「龍が如く極」白金留念/">「龍が如く極」白金留念</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>虽然是pc版，为了和<del>还没有下单的</del>后面几作统一说法，姑且称作白金<br>推完0主线后马上下载了极1，从7.12第一次打开，到8.21终于刷完全部成就，ギリギリ将游玩时间控制在了120h以下（库游戏空洞骑士游玩时长第一的地位保住了）<br><img src="//0wxzg0.github.io/2020/08/23/「龍が如く極」白金留念/%E6%97%B6%E9%95%BF%E6%88%AA%E5%9B%BE.png" alt="第二个超百时长的游戏"></p>
+        
+          <p class="article-more-link">
+            <a href="/2020/08/23/「龍が如く極」白金留念/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://0wxzg0.github.io/2020/08/23/「龍が如く極」白金留念/" data-id="ckpo0czvm000xksvxptkn9774" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏/">游戏</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-汇编语言复习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/26/汇编语言复习/" class="article-date">
+  <time datetime="2020-06-25T23:55:40.000Z" itemprop="datePublished">2020-06-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/26/汇编语言复习/">汇编语言复习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#第一章-基础知识">第一章 基础知识</a><ul>
+<li><a href="#计算机内部是采用什么计数制来表示数和信息的">计算机内部是采用什么计数制来表示数和信息的？</a></li>
+<li><a href="#计算机中的整数有几种表示方式最常用的是哪一种码制">计算机中的整数有几种表示方式？最常用的是哪一种码制？</a></li>
+<li><a href="#求补的运算规则">求补的运算规则</a></li>
+<li><a href="#常用ascii码记忆">常用ASCII码（记忆）</a></li>
+</ul>
+</li>
+<li><a href="#第二章-80x86计算机组织">第二章 80x86计算机组织</a><ul>
+<li><a href="#汇编程序cpu可见的寄存阵列用途记忆">汇编程序CPU可见的寄存阵列用途（记忆）</a><ul>
+<li><a href="#数据寄存器">数据寄存器</a></li>
+<li><a href="#指针及变址寄存器">指针及变址寄存器</a></li>
+<li><a href="#段寄存器">段寄存器</a></li>
+<li><a href="#控制寄存器">控制寄存器</a></li>
+</ul>
+</li>
+<li><a href="#计算机存储器组织方式">计算机存储器组织方式</a><ul>
+<li><a href="#存储单元的地址和内容">存储单元的地址和内容</a></li>
+<li><a href="#span-idjp2存储器地址表示方式span"><span id="jp2">存储器地址表示方式</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第三章-80x86的指令系统和寻址方式">第三章 80x86的指令系统和寻址方式</a><ul>
+<li><a href="#指令系统">指令系统</a><ul>
+<li><a href="#数据传送指令">数据传送指令</a></li>
+<li><a href="#算数指令">算数指令</a></li>
+<li><a href="#逻辑指令">逻辑指令</a></li>
+<li><a href="#串处理指令">串处理指令</a></li>
+<li><a href="#控制转移指令">控制转移指令</a></li>
+<li><a href="#处理器控制指令">处理器控制指令</a></li>
+</ul>
+</li>
+<li><a href="#寻址方式">寻址方式</a><ul>
+<li><a href="#与数据有关的寻址方式">与数据有关的寻址方式</a></li>
+<li><a href="#与转移地址有关的寻址方式">与转移地址有关的寻址方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第四章-汇编语言程序格式-伪操作伪指令">第四章 汇编语言程序格式–伪操作（伪指令）</a><ul>
+<li><a href="#数据定义伪指令"><strong>数据定义</strong>伪指令</a></li>
+<li><a href="#操作数运算符">操作数运算符</a></li>
+<li><a href="#程序命名结束和过程伪指令">程序命名，结束和过程伪指令</a></li>
+<li><a href="#段定义伪指令">段定义伪指令</a><ul>
+<li><a href="#span-idjp7segment伪指令span"><span id="jp7">segment伪指令</span></a></li>
+<li><a href="#assume伪指令">ASSUME伪指令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第五章-循环与分支程序设计">第五章 循环与分支程序设计</a><ul>
+<li><a href="#循环">循环</a><ul>
+<li><a href="#起泡排序法">起泡排序法</a></li>
+</ul>
+</li>
+<li><a href="#分支">分支</a><ul>
+<li><a href="#折半查找法">折半查找法</a></li>
+<li><a href="#跳转表法实现case结构">跳转表法实现CASE结构</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第六章-子程序结构">第六章 子程序结构</a><ul>
+<li><a href="#子程序参数传递方法">子程序参数传递方法</a></li>
+<li><a href="#伪操作struc的用途是什么">伪操作STRUC的用途是什么</a></li>
+<li><a href="#子程序嵌套与递归的区别">子程序嵌套与递归的区别</a></li>
+</ul>
+</li>
+<li><a href="#第七章-高级汇编语言技术">第七章 高级汇编语言技术</a><ul>
+<li><a href="#宏汇编">宏汇编</a><ul>
+<li><a href="#宏汇编操作符">宏汇编操作符</a></li>
+<li><a href="#local伪操作">LOCAL伪操作</a></li>
+</ul>
+</li>
+<li><a href="#宏定义与子程序的异同">宏定义与子程序的异同</a></li>
+<li><a href="#重复汇编">重复汇编</a></li>
+<li><a href="#条件汇编">条件汇编</a></li>
+</ul>
+</li>
+<li><a href="#第八章-输入输出程序设计">第八章 输入输出程序设计</a><ul>
+<li><a href="#in-out指令的用法">IN OUT指令的用法</a></li>
+<li><a href="#中断传送方式工作机制与编程方法">中断传送方式工作机制与编程方法</a></li>
+</ul>
+</li>
+<li><a href="#第九章-bios和dos中断">第九章 BIOS和DOS中断</a><ul>
+<li><a href="#调用方法">调用方法</a></li>
+<li><a href="#键盘io">键盘I/O</a></li>
+<li><a href="#显示器io">显示器I/O</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+        
+          <p class="article-more-link">
+            <a href="/2020/06/26/汇编语言复习/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://0wxzg0.github.io/2020/06/26/汇编语言复习/" data-id="ckpo0czvk000vksvxpd84v2xq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/汇编/">汇编</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-数学建模考前复习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/13/数学建模考前复习笔记/" class="article-date">
@@ -203,7 +383,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/" data-id="ckpgq0kox000e9cvxszmucnvj" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/13/数学建模考前复习笔记/" data-id="ckpo0czvh000uksvxjmz82eu5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学建模/">数学建模</a></li></ul>
@@ -272,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/" data-id="ckpgq0kos000c9cvxt9lpgrm5" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/12/形式语言与编译课程笔记（简）/" data-id="ckpo0czus000aksvxm7id4d48" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编译原理/">编译原理</a></li></ul>
@@ -319,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/06/11/test/" data-id="ckpgq0koo00099cvx1oynde9k" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/06/11/test/" data-id="ckpo0d02p0022ksvxzrbfyh23" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -435,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/02/02/galgame攻略记录/" data-id="ckpgq0kof00059cvx6i4b0dqu" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/02/02/galgame攻略记录/" data-id="ckpo0czw30012ksvxka4g1lfu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏/">游戏</a></li></ul>
@@ -478,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2020/01/25/电路编程/" data-id="ckpgq0kxz00199cvxvq2karf4" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2020/01/25/电路编程/" data-id="ckpo0czuv000dksvxzxacnj0q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li></ul>
@@ -521,7 +701,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/10/Huffman编码/" data-id="ckpgq0kob00049cvxfu6dmjr0" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/10/Huffman编码/" data-id="ckpo0czup0008ksvxfu2qoi70" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
@@ -628,7 +808,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/09/C-面向对象课程笔记/" data-id="ckpgq0ko900039cvx4m45aqt1" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/09/C-面向对象课程笔记/" data-id="ckpo0d02n0021ksvxc16wfcp9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
@@ -671,152 +851,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/11/09/雪夜/" data-id="ckpgq0kol00089cvxvelbfa7k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/废纸篓/">废纸篓</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019-7-20-宮迫博之と田村亮の謝罪会見（全文）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/" class="article-date">
-  <time datetime="2019-07-26T05:21:30.000Z" itemprop="datePublished">2019-07-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/">2019-7-20　宮迫博之と田村亮の謝罪会見（全文）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>文章主要来源为<a href="https://headlines.yahoo.co.jp/hl?a=20190720-00010002-wordleaf-ent" target="_blank" rel="noopener">THE PAGE</a>  </li>
-<li>完整翻译→lh字幕组<a href="https://weibo.com/2784997275/HExqEagEP" target="_blank" rel="noopener">微博</a></li>
-</ul>
-<hr>
-<p>　闇営業問題で吉本興業との契約解消が解消されたお笑いコンビ「雨上がり決死隊」の宮迫博之さん（49）と「ロンドンブーツ 1号2号」の田村亮さん（47）が20日午後、記者会見を行った。</p>
-<!-- toc -->
-
-<ul>
-<li><a href="#宮迫さん田村さんの謝罪">宮迫さん・田村さんの謝罪</a></li>
-<li><a href="#ことの経緯を教えてほしい">ことの経緯を教えてほしい</a></li>
-<li><a href="#世間の反応が大きく-怖くなった">世間の反応が大きく、怖くなった</a></li>
-<li><a href="#おまえらテープ回してないやろな">おまえらテープ回してないやろな</a></li>
-<li><a href="#引退してでも記者会見をやらせてくれと連絡した">引退してでも記者会見をやらせてくれと連絡した</a></li>
-<li><a href="#引退会見か契約解除-どちらか選べ">引退会見か契約解除、どちらか選べ</a></li>
-<li><a href="#宮迫さんの今の思いは">宮迫さんの今の思いは？</a></li>
-<li><a href="#今日話していることはすべて真実か">今日話していることはすべて真実か</a></li>
-<li><a href="#マネジメント契約解消に至る重大な支障とは">マネジメント契約解消に至る重大な支障とは？</a></li>
-<li><a href="#100万円をもらった-とされる時の状況を教えてほしい">100万円をもらった、とされる時の状況を教えてほしい</a></li>
-<li><a href="#謝ろうとしている子供を止めるのは親ではない">謝ろうとしている子供を止めるのは親ではない</a></li>
-<li><a href="#亮さんは吉本との関係をどうしたいのか">亮さんは吉本との関係をどうしたいのか</a></li>
-<li><a href="#なぜうそをついたのか">なぜうそをついたのか</a></li>
-<li><a href="#本当に申し訳ないとしか言いようがない">本当に申し訳ないとしか言いようがない</a></li>
-<li><a href="#入江さんはどのような形で誘いを掛けたのか">入江さんはどのような形で誘いを掛けたのか</a></li>
-<li><a href="#入江さんが招集したのはこれが初めてだったのか">入江さんが招集したのはこれが初めてだったのか</a></li>
-<li><a href="#どうすれば防げると思うか">どうすれば防げると思うか</a></li>
-<li><a href="#仲間や相方に伝えたいことは">仲間や相方に伝えたいことは？</a></li>
-<li><a href="#これまでの闇営業の経験は">これまでの闇営業の経験は？</a></li>
-<li><a href="#吉本興業という会社への思いは">吉本興業という会社への思いは？</a></li>
-<li><a href="#どんどん不信感が出てきた">どんどん不信感が出てきた</a></li>
-<li><a href="#2人には将来吉本と関係を修復し-仕事を続けてほしい">2人には将来吉本と関係を修復し、仕事を続けてほしい</a></li>
-<li><a href="#亮さんの契約解除も発表されたようだがどう思うか">亮さんの契約解除も発表されたようだがどう思うか</a></li>
-<li><a href="#家族にはどう説明したか">家族にはどう説明したか</a></li>
-<li><a href="#謝罪会見という選択はなかったということか">謝罪会見という選択はなかったということか</a></li>
-<li><a href="#吉本興業はファミリーというが-本当か">吉本興業はファミリーというが、本当か</a></li>
-<li><a href="#会社から切り捨てられたという気もするが-どう思うか">会社から切り捨てられたという気もするが、どう思うか</a></li>
-<li><a href="#契約解消に伴うお金の話はしているのか">契約解消に伴うお金の話はしているのか</a></li>
-<li><a href="#直営業を行った場合-契約を解除するという決まりはあるのか">直営業を行った場合、契約を解除するという決まりはあるのか</a></li>
-<li><a href="#吉本興業は何を守るために説明させなかったのか">吉本興業は何を守るために説明させなかったのか</a></li>
-<li><a href="#お金をもらったことを隠したのはなぜか">お金をもらったことを隠したのはなぜか</a></li>
-<li><a href="#岡本社長が説明を止めたという理解でよいか">岡本社長が説明を止めたという理解でよいか</a></li>
-<li><a href="#会社とは弁護士を通して話し合うつもりか">会社とは弁護士を通して話し合うつもりか</a></li>
-<li><a href="#入江さんのスポンサーはエステ会社か">入江さんのスポンサーはエステ会社か</a></li>
-<li><a href="#吉本興業も把握していたのか">吉本興業も把握していたのか</a></li>
-<li><a href="#うそをつく前に戻れるとしたら">うそをつく前に戻れるとしたら？</a></li>
-<li><a href="#fridayを訴える考えはないのか">FRIDAYを訴える考えはないのか</a></li>
-<li><a href="#流してしまうと今後やりにくいのでは">流してしまうと今後やりにくいのでは？</a></li>
-<li><a href="#吉本も反社会勢力とのつながりがあったのか">吉本も反社会勢力とのつながりがあったのか</a></li>
-<li><a href="#会社はなぜ謝罪会見をすぐにさせなかったのか">会社はなぜ謝罪会見をすぐにさせなかったのか</a></li>
-<li><a href="#反社の人を身近に感じる機会はよくあるのか">反社の人を身近に感じる機会はよくあるのか</a></li>
-<li><a href="#写真を断り難いケースは多々ある">写真を断り難いケースは多々ある</a></li>
-<li><a href="#芸能界だから反社とつながりやすい-ということはないのか">芸能界だから反社とつながりやすい、ということはないのか</a></li>
-<li><a href="#24日に呼び出されたメンバーは">24日に呼び出されたメンバーは？</a></li>
-<li><a href="#一連の騒動で吉本や芸人のイメージがダウンしたのでは">一連の騒動で吉本や芸人のイメージがダウンしたのでは？</a></li>
-<li><a href="#契約や給料の安さが直営業の温床では">契約や給料の安さが直営業の温床では？</a></li>
-<li><a href="#ファンに伝えたいことは">ファンに伝えたいことは？</a></li>
-<li><a href="#2人だけの記者会見実施を決めたのはいつか">2人だけの記者会見実施を決めたのはいつか？</a></li>
-<li><a href="#2人ともコンビはそれぞれ続けるのか">2人ともコンビはそれぞれ続けるのか</a></li>
-</ul>
-<!-- tocstop -->
-        
-          <p class="article-more-link">
-            <a href="/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/07/26/2019-7-20-宮迫博之と田村亮の謝罪会見（全文）/" data-id="ckpgq0kyo001x9cvx3s5eqe4c" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/お笑い/">お笑い</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ヤミ" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/17/ヤミ/" class="article-date">
-  <time datetime="2019-07-17T15:58:19.000Z" itemprop="datePublished">2019-07-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/17/ヤミ/">ヤミ</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        This passage needs a password
-        
-          <p class="article-more-link">
-            <a href="/2019/07/17/ヤミ/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://0wxzg0.github.io/2019/07/17/ヤミ/" data-id="ckpgq0kp6000h9cvx6qd41eua" class="article-share-link">Share</a>
+      <a data-url="http://0wxzg0.github.io/2019/11/09/雪夜/" data-id="ckpo0czuj0004ksvxjreh0vts" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/废纸篓/">废纸篓</a></li></ul>
@@ -856,7 +891,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 12.5px;">C++</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/お笑い/" style="font-size: 10px;">お笑い</a> <a href="/tags/学校/" style="font-size: 20px;">学校</a> <a href="/tags/废纸篓/" style="font-size: 20px;">废纸篓</a> <a href="/tags/数学建模/" style="font-size: 10px;">数学建模</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/日常/" style="font-size: 15px;">日常</a> <a href="/tags/汇编/" style="font-size: 10px;">汇编</a> <a href="/tags/游戏/" style="font-size: 17.5px;">游戏</a> <a href="/tags/绘画/" style="font-size: 12.5px;">绘画</a> <a href="/tags/编译原理/" style="font-size: 10px;">编译原理</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+      <a href="/tags/C/" style="font-size: 12px;">C++</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/お笑い/" style="font-size: 10px;">お笑い</a> <a href="/tags/学校/" style="font-size: 18px;">学校</a> <a href="/tags/废纸篓/" style="font-size: 20px;">废纸篓</a> <a href="/tags/数学建模/" style="font-size: 10px;">数学建模</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/日常/" style="font-size: 14px;">日常</a> <a href="/tags/汇编/" style="font-size: 10px;">汇编</a> <a href="/tags/游戏/" style="font-size: 16px;">游戏</a> <a href="/tags/绘画/" style="font-size: 12px;">绘画</a> <a href="/tags/编译原理/" style="font-size: 10px;">编译原理</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
     </div>
   </div>
 
@@ -878,6 +913,14 @@
       <ul>
         
           <li>
+            <a href="/2021/06/08/男友意外怀孕该怎么办/">男友意外怀孕该怎么办</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/流亡/">流亡</a>
+          </li>
+        
+          <li>
             <a href="/2021/06/03/婚礼/">婚礼</a>
           </li>
         
@@ -887,14 +930,6 @@
         
           <li>
             <a href="/2021/05/09/涂鸦板/">涂鸦板</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/09/2021搞棈日记/">2021搞棈日记</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/17/自存教程不完全汇总/">自存教程不完全汇总</a>
           </li>
         
       </ul>
