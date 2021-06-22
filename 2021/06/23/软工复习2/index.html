@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>软工复习2 | 無限のゴミ箱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="全是背的，又不知道考什么，nmd  1 chapter1 overall 2 chapter8 SDLC and Model 系统生命周期和模型 3 chapter9 Project Management 项目管理 4 chapter2 Gather Requirements 5 chapter3 Use Case Diagram 用例图 6 chapter5 Use Case Descripti">
+<meta name="keywords" content="学校">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软工复习2">
+<meta property="og:url" content="http://0wxzg0.github.io/2021/06/23/软工复习2/index.html">
+<meta property="og:site_name" content="無限のゴミ箱">
+<meta property="og:description" content="全是背的，又不知道考什么，nmd  1 chapter1 overall 2 chapter8 SDLC and Model 系统生命周期和模型 3 chapter9 Project Management 项目管理 4 chapter2 Gather Requirements 5 chapter3 Use Case Diagram 用例图 6 chapter5 Use Case Descripti">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211049270609855.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211055116709743.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211059492799464.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211107492325836.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211110062328248.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211114294045681.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211115501078292.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211116575297928.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211442208419219.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211444024664473.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211445013739044.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211130147016421.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211428067327755.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211432134986001.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211447504664217.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812121536085-1910821572.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812121725773-1749329847.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812122128867-1882665158.png">
+<meta property="og:image" content="https://pic001.cnblogs.com/images/2012/1/2012013015250613.gif">
+<meta property="og:image" content="https://pic001.cnblogs.com/images/2012/1/2012013015260081.gif">
+<meta property="og:image" content="https://pic001.cnblogs.com/images/2012/1/2012013015265841.gif">
+<meta property="og:image" content="https://pic001.cnblogs.com/images/2012/1/2012013015274296.gif">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2017/03/W2K7C5yR1D45SVvZXY18.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2017/03/E59nJupftrA2PQVJNAVG.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2017/03/8RrbcwlfkOWs6kcsG47A.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2017/03/7wl54XDbyKX4A6NCU2Ok.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2021/06/23/软工复习2/ssd1.png">
+<meta property="og:image" content="http://0wxzg0.github.io/2021/06/23/软工复习2/ssd2.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/9661985-18443524783e10fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/697/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/9661985-a3f8519c401493ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/745/format/webp">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812123014413-2064534630.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_47.gif">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_41.gif">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_681.gif">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_278.gif">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_129.gif">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210743838-151551384.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210813112-802696148.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210856165-796189279.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210906847-1199067207.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210916284-972240484.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208211100644-678863341.png">
+<meta property="og:image" content="https://images.cnblogs.com/cnblogs_com/gnuhpc/201201/20120113131949320.png">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-53cfe3b28ce0dd922561737cbc69284b_720w.jpg">
+<meta property="og:updated_time" content="2021-06-22T19:11:16.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软工复习2">
+<meta name="twitter:description" content="全是背的，又不知道考什么，nmd  1 chapter1 overall 2 chapter8 SDLC and Model 系统生命周期和模型 3 chapter9 Project Management 项目管理 4 chapter2 Gather Requirements 5 chapter3 Use Case Diagram 用例图 6 chapter5 Use Case Descripti">
+<meta name="twitter:image" content="https://images0.cnblogs.com/blog2015/775886/201506/211049270609855.png">
+  
+    <link rel="alternate" href="/atom.xml" title="無限のゴミ箱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">無限のゴミ箱</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://0wxzg0.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-软工复习2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/06/23/软工复习2/" class="article-date">
+  <time datetime="2021-06-22T19:05:02.000Z" itemprop="datePublished">2021-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      软工复习2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+		<p>全是背的，又不知道考什么，nmd</p>
+<ul>
+<li>1 chapter1 overall</li>
+<li>2 chapter8 SDLC and Model 系统生命周期和模型</li>
+<li>3 chapter9 Project Management 项目管理</li>
+<li>4 chapter2 Gather Requirements</li>
+<li>5 chapter3 Use Case Diagram 用例图</li>
+<li>6 chapter5 Use Case Descriptions 用例描述</li>
+<li>7 chapter4 Class Diagram 类图</li>
+<li>8 chapter6 Architecture Design 架构设计</li>
+<li>9 chapter10 Design Classes</li>
+<li>10 chapter11 Design Layers</li>
+<li>11 几种设计模式</li>
+<li>12 chapter7 UI Design And Control Security</li>
+<li>13 chapter12 Implement</li>
+<li>14 软件测试</li>
+<li>15 Agile</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<!-- toc -->
+
+<ul>
+<li><a href="#1-overall">1 overall</a><ul>
+<li><a href="#system-development-lifecycle-sdlc">System development lifecycle (SDLC)</a></li>
+</ul>
+</li>
+<li><a href="#2-sdlc-and-model">2 SDLC and Model</a><ul>
+<li><a href="#methodologies">Methodologies</a></li>
+<li><a href="#waterfall-model-瀑布模型预测性sdlc">Waterfall model 瀑布模型（预测性SDLC）</a></li>
+<li><a href="#construction-and-modeling-software-软件构建和建模">construction and modeling software 软件构建和建模</a></li>
+</ul>
+</li>
+<li><a href="#3-project-management">3 Project Management</a><ul>
+<li><a href="#project-manager-responsibilities-项目经理的职责">Project Manager Responsibilities 项目经理的职责</a></li>
+<li><a href="#pmbokproject-management-body-of-knowledge">PMBOK(Project Management Body of Knowledge)</a></li>
+<li><a href="#核心流程">核心流程</a></li>
+<li><a href="#甘特图">甘特图</a></li>
+</ul>
+</li>
+<li><a href="#4-gather-requirements">4 Gather Requirements</a><ul>
+<li><a href="#系统分析活动">系统分析活动</a></li>
+<li><a href="#功能需求和非功能需求">功能需求和非功能需求</a></li>
+<li><a href="#purps-requirements-acronym-需求缩写">PURPS+ Requirements Acronym 需求缩写</a></li>
+<li><a href="#information-gathering-techniques-收集信息技术">Information Gathering Techniques 收集信息技术</a></li>
+<li><a href="#uml">UML</a></li>
+<li><a href="#activity-diagrams-活动图">Activity Diagrams 活动图</a><ul>
+<li><a href="#活动状态图activity">活动状态图（Activity）</a></li>
+<li><a href="#动作状态actions">动作状态（Actions）</a></li>
+<li><a href="#动作状态约束action-constraints">动作状态约束（Action Constraints）</a></li>
+<li><a href="#动作流control-flow">动作流（Control Flow）</a></li>
+<li><a href="#开始节点initial-node">开始节点（Initial Node）</a></li>
+<li><a href="#终止节点final-node">终止节点（Final Node）</a></li>
+<li><a href="#对象objects-数据存储对象datastore">对象（Objects）、数据存储对象（DataStore）</a></li>
+<li><a href="#时间信号-发送信号-接收信号">时间信号、发送信号、接收信号</a></li>
+<li><a href="#对象流object-flows">对象流（Object Flows）</a></li>
+<li><a href="#分支与合并decision-and-merge-nodes">分支与合并（Decision and Merge Nodes）</a></li>
+<li><a href="#分叉与汇合fork-and-join-nodes">分叉与汇合（Fork and Join Nodes）</a></li>
+<li><a href="#泳道partition">泳道（Partition）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5-use-case-diagram">5 Use Case Diagram</a><ul>
+<li><a href="#identifying-use-cases-识别用例">identifying use cases 识别用例</a></li>
+<li><a href="#use-case-diagrams-用例图">Use Case Diagrams 用例图</a><ul>
+<li><a href="#actor-参与者">Actor 参与者</a></li>
+<li><a href="#use-case-用例">Use Case 用例</a></li>
+<li><a href="#subsystem-子系统">Subsystem 子系统</a></li>
+<li><a href="#realationship-关系">Realationship 关系</a><ul>
+<li><a href="#关联association">关联(Association)</a></li>
+<li><a href="#泛化inheritance">泛化(Inheritance)</a></li>
+<li><a href="#包含include">包含(Include)</a></li>
+<li><a href="#扩展extend">扩展(Extend)</a></li>
+<li><a href="#包含include-扩展extend-泛化inheritance-的区别">包含(include)、扩展(extend)、泛化(Inheritance) 的区别：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#6-use-case-descriptions">6 Use Case Descriptions</a><ul>
+<li><a href="#use-case-descriptions-用例描述">Use Case Descriptions 用例描述</a></li>
+<li><a href="#system-sequence-diagram-ssd-系统时序图">System Sequence Diagram (SSD) 系统时序图</a><ul>
+<li><a href="#组成元素">组成元素</a><ul>
+<li><a href="#角色actor">角色（Actor）</a></li>
+<li><a href="#对象object">对象（Object）</a></li>
+<li><a href="#生命线lifeline">生命线（Lifeline）</a></li>
+<li><a href="#控制焦点focus-of-control">控制焦点（Focus of Control）</a></li>
+<li><a href="#消息message">消息（Message）</a></li>
+<li><a href="#自关联消息">自关联消息</a></li>
+</ul>
+</li>
+<li><a href="#组合片段">组合片段</a><ul>
+<li><a href="#抉择alt">抉择（Alt）</a></li>
+<li><a href="#选项opt">选项（Opt）</a></li>
+<li><a href="#循环loop">循环（Loop）</a></li>
+<li><a href="#并行par">并行（Par）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#state-machine-diagram-状态机图">State Machine Diagram 状态机图</a><ul>
+<li><a href="#复合状态">复合状态</a></li>
+<li><a href="#正交状态-orthogonal-state">正交状态 (Orthogonal State)</a></li>
+</ul>
+</li>
+<li><a href="#extending-and-integrating-requirements-models-扩展和集成需求模型">Extending and Integrating Requirements Models 扩展和集成需求模型</a></li>
+</ul>
+</li>
+<li><a href="#7-class-diagram">7 Class Diagram</a><ul>
+<li><a href="#class-diagram-类图">Class Diagram 类图</a><ul>
+<li><a href="#泛化generalization">泛化（Generalization）</a></li>
+<li><a href="#实现realization">实现（Realization）</a></li>
+<li><a href="#关联association">关联（Association)</a></li>
+<li><a href="#聚合aggregation">聚合（Aggregation）</a></li>
+<li><a href="#组合composition">组合(Composition)</a></li>
+<li><a href="#依赖dependency">依赖(Dependency)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#8-architecture-design">8 Architecture Design</a><ul>
+<li><a href="#design-activities-设计活动">Design Activities 设计活动</a></li>
+</ul>
+</li>
+<li><a href="#9-design-classes">9 Design Classes</a><ul>
+<li><a href="#component-diagram-for-architectural-design-组件图">Component Diagram for Architectural Design 组件图</a><ul>
+<li><a href="#组件">组件</a></li>
+<li><a href="#接口">接口</a></li>
+<li><a href="#端口">端口</a></li>
+<li><a href="#组件的内部结构">组件的内部结构</a></li>
+</ul>
+</li>
+<li><a href="#crc-cards">CRC cards</a></li>
+</ul>
+</li>
+<li><a href="#10-design-layers">10 Design Layers</a><ul>
+<li><a href="#use-case-realization-用例实现">Use Case Realization 用例实现</a></li>
+<li><a href="#three-layer-design-三层设计">Three Layer Design 三层设计</a></li>
+</ul>
+</li>
+<li><a href="#11-几种设计模式">11 几种设计模式</a></li>
+<li><a href="#12-ui-design-and-control-security">12 UI Design And Control Security</a><ul>
+<li><a href="#interfaces-界面">Interfaces 界面</a></li>
+<li><a href="#metaphors-of-human-computer-interaction-人机交互的隐喻">Metaphors of Human Computer Interaction 人机交互的隐喻</a></li>
+<li><a href="#system-inputs">System Inputs</a></li>
+<li><a href="#system-outputs">System Outputs</a></li>
+<li><a href="#data-security">Data Security</a></li>
+</ul>
+</li>
+<li><a href="#13-implement">13 Implement</a><ul>
+<li><a href="#order-of-implementation-实施顺序">Order of Implementation 实施顺序</a></li>
+</ul>
+</li>
+<li><a href="#14-软件测试">14 软件测试</a></li>
+<li><a href="#15-agile">15 Agile</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1><span id="1-overall">1 overall</span></h1><h2><span id="system-development-lifecycle-sdlc">System development lifecycle (SDLC)</span></h2><p>the entire process consisting of all activities required to build, launch, and maintain an information system 系统开发生命周期：由构建、启动和维护信息系统所需的所有活动组成的整个过程（6个核心流程）</p>
+<ul>
+<li><strong>project initation 计划启动</strong>：Identify the problem or need and obtain approval 确定问题或需求并获得批准</li>
+<li><strong>project planning 计划项目</strong>：Plan and monitor the project 计划和监控项目</li>
+<li><strong>analysis 分析</strong>：Discover and understand the details of the problem or need 发现并了解问题或需求的细节</li>
+<li><strong>design 设计</strong>：Design the system components that solve the problem or satisfy the need 设计解决问题或满足需要的系统组件</li>
+<li><strong>implementation 执行</strong>：Build, test, and integrate system components 构建、测试和集成系统组件</li>
+<li><strong>deployment 部署</strong>：Complete system tests and then deploy the solution 完成系统测试，然后部署解决方案</li>
+</ul>
+<h1><span id="2-sdlc-and-model">2 SDLC and Model</span></h1><h2><span id="methodologies">Methodologies</span></h2><p>SDLC, Models, Tools, and Techniques 方法论：SDLC、模型、工具和技术</p>
+<h2><span id="waterfall-model-瀑布模型预测性sdlc">Waterfall model 瀑布模型（预测性SDLC）</span></h2><ul>
+<li><p>SDLC that assumes phases can be completed sequentially with no overlap or iteration 假设阶段可以按顺序完成而没有重叠或迭代的 SDLC</p>
+</li>
+<li><p>Once one phase is completed, you fall over the waterfall to the next phase, no going back 一旦一个阶段完成，你就会从进入下一阶段，不能回头</p>
+</li>
+</ul>
+<h2><span id="construction-and-modeling-software-软件构建和建模">construction and modeling software 软件构建和建模</span></h2><p>two approaches to construction and modeling software: the traditional structured approach and the newer object-oriented approach 构建和建模软件两种方法：结构化方法（传统）、面向对象方法（较新）</p>
+<ul>
+<li>结构化流程图：顺序、选择、循环（有始有终，单入单出）</li>
+<li>OO：UML Design Class Diagram, UML Sequence Diagram UML设计类图，UML序列图</li>
+</ul>
+<h1><span id="3-project-management">3 Project Management</span></h1><h2><span id="project-manager-responsibilities-项目经理的职责">Project Manager Responsibilities 项目经理的职责</span></h2><ul>
+<li><p>Internal Responsibilities 内部职责</p>
+<ul>
+<li>Developing the project schedule 制定项目进度表</li>
+<li>Recruiting and training team members 招募和培训团队成员</li>
+<li>Assigning work to teams and team members 将工作分配给团队和团队成员</li>
+<li>Assessing project risks 评估项目风险</li>
+<li>Monitoring and controlling project deliverables and milestones 监控项目可交付成果和里程碑</li>
+</ul>
+</li>
+<li><p>External Responsibilities 外部责任</p>
+<ul>
+<li>Reporting the project’s status and progress 报告项目的状态和进度</li>
+<li>Working directly with the client (the project’s sponsor) and other stakeholders 直接与客户（项目发起人）和其他利益相关者合作</li>
+<li>Identifying resource needs and obtaining resources 识别资源需求和获取资源</li>
+</ul>
+</li>
+</ul>
+<h2><span id="pmbokproject-management-body-of-knowledge">PMBOK(Project Management Body of Knowledge)</span></h2><p>PMPOK is organized into 9 knowledge areas:</p>
+<ul>
+<li>Project <strong>Scope</strong> Management—Defining and controlling the functions that are to be included in the system as well as the scope of the work to be done by the project team 项目<strong>范围</strong>管理：定义和控制要包含在系统中的功能以及项目团队要完成的工作范围</li>
+<li>Project <strong>Time</strong> Management—Creating a detailed schedule of all project tasks and then monitoring the progress of the project against defined milestones 项目<strong>时间</strong>管理：创建所有项目任务的详细时间表，然后根据定义的里程碑监控项目进度</li>
+<li>Project <strong>Cost</strong> Management—Calculating the initial cost/benefit analysis and its later updates and monitoring expenditures as the project progresses 项目<strong>成本</strong>管理：计算初始成本/收益分析及其后期更新，并随着项目的进展监控支出</li>
+<li>Project <strong>Quality</strong> Management—Establishing a comprehensive plan for ensuring quality, which includes quality control activities for every phase of a project 项目<strong>质量</strong>管理：制定全面的质量保证计划，包括项目每个阶段的质量控制活动</li>
+<li>Project <strong>Human Resource</strong> Management—Recruiting and hiring project team members; training, motivating, and team building; and implementing related activities to ensure a happy, productive team 项目<strong>人力资源</strong>管理：招聘和聘用项目团队成员；培训、激励和团队建设；并实施相关活动，以确保一个快乐、富有成效的团队</li>
+<li>Project <strong>Communications</strong> Management—Identifying all stakeholders and the key communications to each; also establishing all communications mechanisms and schedules 项目<strong>沟通</strong>​​管理：确定所有利益相关者以及与每个利益相关者的关键沟通；还建立所有沟通机制和时间表</li>
+<li>Project <strong>Risk</strong> Management—Identifying and reviewing throughout the project all potential risks for failure and developing plans to reduce these risks 项目<strong>风险</strong>管理：在整个项目中识别和审查所有潜在的失败风险，并制定降低这些风险的计划</li>
+<li>Project <strong>Procurement</strong> Management—Developing requests for proposals, evaluating bids, writing contracts, and then monitoring vendor performance 项目<strong>采购</strong>管理：制定提案请求、评估投标、撰写合同，然后监控供应商绩效</li>
+<li>Project <strong>Integration</strong> Management—Integrating all the other knowledge areas into one seamless whole 项目<strong>整合</strong>管理：将所有其他知识领域整合为一个无缝的整体</li>
+</ul>
+<h2><span id="核心流程">核心流程</span></h2><ul>
+<li><p>The core process Identify the problem and obtain approval includes the following activities:  核心流程1（识别问题并获得批准）包括以下活动：</p>
+<ul>
+<li>1) identify the problem 找出问题</li>
+<li>2) quantify project approval factors 量化项目审批因素</li>
+<li>3) perform risk and feasibility analysis 进行风险和可行性分析</li>
+<li>4) review with client and obtain approval 与客户一起审查并获得批准</li>
+</ul>
+</li>
+<li><p>The core process Plan and monitor the project includes the following activities:  核心过程2（计划和监控项目）包括以下活动：</p>
+<ul>
+<li>1) establish the project environment 建立项目环境</li>
+<li>2) schedule the work 安排工作</li>
+<li>3) staff and allocate resources 人员和资源分配</li>
+<li>4) evaluate work processes 评估工作流程</li>
+<li>5) monitor progress and make corrections 监控进度并进行更正</li>
+</ul>
+</li>
+</ul>
+<h2><span id="甘特图">甘特图</span></h2><p>Gantt Chart for first iteration</p>
+<ul>
+<li>Shows task, duration, start date, predecessors, and resources assigned to task 显示任务、工期、开始日期、前置任务和分配给任务的资源</li>
+<li>Generates chart graphically showing dates, predecessors, tasks, and critical path 生成以图形方式显示日期、前任、任务和关键路径的图表</li>
+<li>Critical path–a sequence of tasks that can’t be delayed without causing the entire project to be delayed 关键路径——一系列任务不能被延迟而不导致整个项目被延迟</li>
+</ul>
+<h1><span id="4-gather-requirements">4 Gather Requirements</span></h1><h2><span id="系统分析活动">系统分析活动</span></h2><ul>
+<li>Gather Detailed Information 收集详细信息</li>
+<li>Define Requirements 定义需求</li>
+<li>Prioritize Requirements 优先需求</li>
+<li>Develop User-Interface Dialogs 开发用户界面对话框</li>
+<li>Evaluate Requirements with Users 与用户一起评估需求</li>
+</ul>
+<h2><span id="功能需求和非功能需求">功能需求和非功能需求</span></h2><p>System Requirements = Functional requirements + Non-functional requirements</p>
+<ul>
+<li><p>Functional Requirements– the activities the system must perform 功能需求——系统必须执行的活动</p>
+<ul>
+<li>Business uses, functions the users carry out 业务用途，用户执行的功能</li>
+<li>Use cases in Chapter 1</li>
+</ul>
+</li>
+<li><p>Non-Functional Requirements– other system characteristics 非功能性需求——其他系统特性</p>
+<ul>
+<li>Constraints and performance goals 约束和性能目标</li>
+</ul>
+</li>
+</ul>
+<h2><span id="purps-requirements-acronym-需求缩写">PURPS+ Requirements Acronym 需求缩写</span></h2><ul>
+<li>Functional requirements</li>
+<li>Usability requirements</li>
+<li>Reliability requirements</li>
+<li>Performance requirements</li>
+<li>Security requirements</li>
+<li><code>+</code> even more categories…</li>
+</ul>
+<h2><span id="information-gathering-techniques-收集信息技术">Information Gathering Techniques 收集信息技术</span></h2><ul>
+<li>Interviewing users and other stakeholders 采访用户和其他利益相关者</li>
+<li>Distributing and collecting questionnaires 分发和收集问卷</li>
+<li>Reviewing inputs, outputs, and documentation 审查输入、输出和文档</li>
+<li>Observing and documenting business procedures 观察和记录业务程序</li>
+<li>Researching vendor solutions 研究供应商解决方案</li>
+<li>Collecting active user comments and suggestions 收集活跃用户的意见和建议</li>
+</ul>
+<h2><span id="uml">UML</span></h2><p>统一建模语言（Unified Modeling Language，UML）又称标准建模语言，是始于1997年的一个OMG标准，它是一个支持模型化和软件系统开发的图形化语言，为软件开发的所有阶段提供模型化和可视化支持，包括由需求分析到规格，到构造和配置。</p>
+<p>UML从考虑系统的不同角度出发，定义了用例图、类图、对象图、包图、状态图、活动图、序列图、协作图、构件图、部署图等10种图。</p>
+<p>常见的UML图有用例图（Use Case Diagram）、类图（Class Diagram）和序列图（Sequence Diagram）。</p>
+<h2><span id="activity-diagrams-活动图">Activity Diagrams 活动图</span></h2><p>活动图是UML用于对系统的动态行为建模的常用工具，它描述活动的顺序，展现从一个活动到另一个活动的控制流。</p>
+<p>活动图在本质上是一种流程图。活动图着重表现从一个活动到另一个活动的控制流，是内部处理驱动的流程。</p>
+<h3><span id="活动状态图activity">活动状态图（Activity）</span></h3><p>活动状态用于表达状态机中的非原子的运行</p>
+<ul>
+<li>(1)、活动状态可以分解成其他子活动或者动作状态。</li>
+<li>(2)、活动状态的内部活动可以用另一个活动图来表示。</li>
+<li>(3)、和动作状态不同，活动状态可以有入口动作和出口动作，也可以有内部转移。</li>
+<li>(4)、动作状态是活动状态的一个特例，如果某个活动状态只包括一个动作，那么它就是一个动作状态。</li>
+</ul>
+<p>UML中活动状态和动作状态的图标相同，但是活动状态可以在图标中给出入口动作和出口动作等信息。</p>
+<p>【图形】平滑的圆角矩形</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211049270609855.png" alt></p>
+<h3><span id="动作状态actions">动作状态（Actions）</span></h3><p>动作状态是指原子的，不可中断的动作，并在此动作完成后通过完成转换转向另一个状态。</p>
+<ul>
+<li>(1)、动作状态是原子的，它是构造活动图的最小单位。</li>
+<li>(2)、动作状态是不可中断的。</li>
+<li>(3)、动作状态是瞬时的行为。</li>
+<li>(4)、动作状态可以有入转换，入转换既可以是动作流，也可以是对象流。动作状态至少有一条出转换，这条转换以内部的完成为起点，与外部事件无关。</li>
+<li>(5)、动作状态与状态图中的状态不同，它不能有入口动作和出口动作，更不能有内部转移。</li>
+<li>(6)、在一张活动图中，动作状态允许多处出现。</li>
+</ul>
+<p>【图形】平滑的圆角矩形</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211055116709743.png" alt></p>
+<h3><span id="动作状态约束action-constraints">动作状态约束（Action Constraints）</span></h3><p>动作状态约束：用来约束动作状态。</p>
+<p>【图形】如下图展示了动作状态的前置条件和后置条件</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211059492799464.png" alt></p>
+<h3><span id="动作流control-flow">动作流（Control Flow）</span></h3><p>动作之间的转换称之为动作流活动图的转换</p>
+<p>【图形】用带箭头的直线表示，箭头的方向指向转入的方向。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211107492325836.png" alt></p>
+<h3><span id="开始节点initial-node">开始节点（Initial Node）</span></h3><p>活动开始节点</p>
+<p>【图形】实心黑色圆点</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211110062328248.png" alt></p>
+<h3><span id="终止节点final-node">终止节点（Final Node）</span></h3><p>分为活动终止节点（activity final nodes）和流程终止节点（flow final nodes）</p>
+<ul>
+<li>(1)、活动终止节点表示整个活动的结束<ul>
+<li>【图形】圆圈+内部实心黑色圆点<br><img src="https://images0.cnblogs.com/blog2015/775886/201506/211114294045681.png" alt></li>
+</ul>
+</li>
+<li>(2)、而流程终止节点表示是子流程的结束。<ul>
+<li>【图形】圆圈+内部十字叉<br><img src="https://images0.cnblogs.com/blog2015/775886/201506/211115501078292.png" alt></li>
+</ul>
+</li>
+</ul>
+<h3><span id="对象objects-数据存储对象datastore">对象（Objects）、数据存储对象（DataStore）</span></h3><p>【图形】矩形方框</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211116575297928.png" alt></p>
+<h3><span id="时间信号-发送信号-接收信号">时间信号、发送信号、接收信号</span></h3><p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211442208419219.png" alt></p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211444024664473.png" alt></p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211445013739044.png" alt></p>
+<h3><span id="对象流object-flows">对象流（Object Flows）</span></h3><p>对象流是动作状态或者活动状态与对象之间的依赖关系，表示动作使用对象或动作对对象的影响。</p>
+<p>用活动图描述某个对象时，可以把涉及到的对象放置在活动图中并用一个依赖将其连接到进行创建、修改和撤销的动作状态或者活动状态上，对象的这种使用方法就构成了对象流。</p>
+<ul>
+<li>(1)、一个对象可以由多个动作操作。</li>
+<li>(2)、一个动作输出的对象可以作为另一个动作输入的对象。</li>
+<li>(3)、在活动图中，同一个对象可以多次出现，它的每一次出现表面该对象正处于对象生存期的不同时间点。</li>
+</ul>
+<p>【图形】用带有箭头的虚线表示。如果箭头是从动作状态出发指向对象，则表示动作对对象施加了一定的影响。施加的影响包括创建、修改和撤销等。如果箭头从对象指向动作状态，则表示该动作使用对象流所指向的对象。</p>
+<p>状态图中的对象用矩形表示，矩形内是该对象的名称，名称下的方括号表明对象此时的状态。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211130147016421.png" alt></p>
+<h3><span id="分支与合并decision-and-merge-nodes">分支与合并（Decision and Merge Nodes）</span></h3><p>选择分支</p>
+<p>【图形】分支与合并用菱形表示，它有一个进入转换（箭头从外指向分支符号），一个或多个离开转换（箭头从分支符号指向外）。而每个离开转换上都会有一个<strong>监护条件</strong>，用来表示满足什么条件的时候执行该转换。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211428067327755.png" alt></p>
+<h3><span id="分叉与汇合fork-and-join-nodes">分叉与汇合（Fork and Join Nodes）</span></h3><p>分叉用于将动作流分为两个或多个<strong>并发运行</strong>的分支，而汇合则用于同步这些并发分支，以达到共同完成一项事务的目的。</p>
+<p>对象在运行时可能会存在两个或多个并发运行的控制流，为了对并发的控制流建模，UML中引入了分叉与汇合的概念。</p>
+<p>【图形】有水平方向和垂直方向。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211432134986001.png" alt></p>
+<h3><span id="泳道partition">泳道（Partition）</span></h3><p>泳道将活动图中的活动划分为若干组，并把每一组指定给负责这组活动的业务组织，即对象。</p>
+<p>在活动图中，泳道区分了负责活动的对象，它明确地表示了哪些活动是由哪些对象进行的。在包含泳道的活动图中，每个活动只能明确地属于一个泳道。</p>
+<p>泳道是用垂直实线绘出，垂直线分隔的区域就是泳道。在泳道的上方可以给出泳道的名字或对象的名字，该对象负责泳道内的全部活动。泳道没有顺序，不同泳道中的活动既可以顺序进行也可以并发进行，动作流和对象流允许穿越分隔线。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/775886/201506/211447504664217.png" alt></p>
+<h1><span id="5-use-case-diagram">5 Use Case Diagram</span></h1><h2><span id="identifying-use-cases-识别用例">identifying use cases 识别用例</span></h2><p>Two techniques for identifying use cases are the user goal technique and the event decomposition technique 识别用例的两种技术是用户目标技术和事件分解技术</p>
+<ul>
+<li>The user goal technique begins by identifying end users called actors and asking what specific goals they have when interacting with the system 用户目标技术首先识别称为参与者的最终用户，并询问他们在与系统交互时有什么具体目标</li>
+<li>The event decomposition technique begins by identifying events that occur that require the system to respond.  事件分解技术首先识别发生的需要系统响应的事件。</li>
+</ul>
+<h2><span id="use-case-diagrams-用例图">Use Case Diagrams 用例图</span></h2><p>用例图，展现了一组用例、参与者（actor）以及它们之间的关系。用例图从用户角度描述系统的静态使用情况，用于建立需求模型。</p>
+<h3><span id="actor-参与者">Actor 参与者</span></h3><p>在系统外部与系统直接交互的人或事物。需要注意以下两点：</p>
+<ul>
+<li><p>1）参与者是角色而不是具体的人，它代表了参与者在与系统打交道的过程中所扮演的角色。所以在系统的实际运作中，一个实际用户可能对应系统的多个参与者。不同的用户也可以只对应于一个参与者，从而代表同一参与者的不同实例。</p>
+</li>
+<li><p>2）参与者作为外部用户（而不是内部）与系统发生交互作用，是它的主要特征。</p>
+</li>
+</ul>
+<p>在UML中，参与者使用一个小人表示</p>
+<p><img src="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812121536085-1910821572.png" alt></p>
+<h3><span id="use-case-用例">Use Case 用例</span></h3><p>系统外部可见的一个系统功能单元。系统的功能由系统单元所提供，并通过一系列系统单元与一个或多个参与者之间交换的消息所表达。用椭圆表示，椭圆中的文字简述系统的功能：</p>
+<p><img src="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812121725773-1749329847.png" alt></p>
+<h3><span id="subsystem-子系统">Subsystem 子系统</span></h3><p>用来展示系统的一部分功能，这部分功能联系紧密。</p>
+<p><img src="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812122128867-1882665158.png" alt></p>
+<h3><span id="realationship-关系">Realationship 关系</span></h3><h4><span id="关联association">关联(Association)</span></h4><p>表示参与者与用例之间的通信，任何一方都可发送或接受消息。</p>
+<p>箭头指向：指向消息接收方</p>
+<p><img src="https://pic001.cnblogs.com/images/2012/1/2012013015250613.gif" alt></p>
+<h4><span id="泛化inheritance">泛化(Inheritance)</span></h4><p>就是通常理解的继承关系，子用例和父用例相似，但表现出更特别的行为；子用例将继承父用例的所有结构、行为和关系。子用例可以使用父用例的一段行为，也可以重载它。父用例通常是抽象的。</p>
+<p>箭头指向：指向父用例</p>
+<p><img src="https://pic001.cnblogs.com/images/2012/1/2012013015260081.gif" alt></p>
+<h4><span id="包含include">包含(Include)</span></h4><p>包含关系用来把一个较复杂用例所表示的功能分解成较小的步骤。</p>
+<p>箭头指向：指向分解出来的功能用例</p>
+<p><img src="https://pic001.cnblogs.com/images/2012/1/2012013015265841.gif" alt></p>
+<h4><span id="扩展extend">扩展(Extend)</span></h4><p>扩展关系是指用例功能的延伸，相当于为基础用例提供一个附加功能。</p>
+<p>箭头指向：指向基础用例</p>
+<p><img src="https://pic001.cnblogs.com/images/2012/1/2012013015274296.gif" alt></p>
+<h4><span id="包含include-扩展extend-泛化inheritance-的区别">包含(include)、扩展(extend)、泛化(Inheritance) 的区别：</span></h4><p>条件性：inheritance中的子用例和include中的被包含的用例会<strong>无条件发生</strong>，而extend中的延伸用例的发生是<strong>有条件</strong>的；</p>
+<p>直接性：inheritance中的子用例和extend中的延伸用例为参与者提供<strong>直接服务</strong>，而include中被包含的用例为参与者提供<strong>间接服务</strong>。</p>
+<p>对extend而言，延伸用例并不包含基础用例的内容，基础用例也不包含延伸用例的内容;</p>
+<p>对Inheritance而言，子用例包含基础用例的所有内容及其和其他用例或参与者之间的关系.</p>
+<h1><span id="6-use-case-descriptions">6 Use Case Descriptions</span></h1><h2><span id="use-case-descriptions-用例描述">Use Case Descriptions 用例描述</span></h2><ul>
+<li>Use case name 用例名称</li>
+<li>Scenario (if needed) 场景（如果需要）</li>
+<li>Triggering event 触发事件</li>
+<li>Brief description 简要描述</li>
+<li>Actors 动作</li>
+<li>Related use cases (<code>&lt;&lt;includes&gt;&gt;</code>) 相关用例</li>
+<li>Stakeholders 利益相关者</li>
+<li>Preconditions 先决条件</li>
+<li>Post conditions 后置条件</li>
+<li>Flow of activities 活动流程</li>
+<li>Exception conditions 异常情况</li>
+</ul>
+<h2><span id="system-sequence-diagram-ssd-系统时序图">System Sequence Diagram (SSD) 系统时序图</span></h2><p>时序图（Sequence Diagram），亦称为序列图、循序图或顺序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</p>
+<p>时序图是一个二维图，横轴表示对象，纵轴表示时间，消息在各对象之间横向传递，依照时间顺序纵向排列。</p>
+<h3><span id="组成元素">组成元素</span></h3><h4><span id="角色actor">角色（Actor）</span></h4><p>系统角色，可以是人、机器、其他系统、子系统</p>
+<h4><span id="对象object">对象（Object）</span></h4><ul>
+<li><p>（1）对象的三种命名方式</p>
+<ul>
+<li>第一种方式包括对象名和类名，用“对象：类”表示；</li>
+<li>第二种方式只显示类名，即表示它是一个匿名对象，用“：类”表示；</li>
+<li>第三种方式只显示对象名不显示类名，用“对象”表示。</li>
+</ul>
+</li>
+<li><p>（2）对象的排列顺序</p>
+<ul>
+<li>对象的左右顺序并不重要，但是为了作图清晰整洁，通常应遵循以下两个原则：把交互频繁的对象尽可能的靠拢；2.把初始化整个交互活动的对象放置在最左端。</li>
+</ul>
+</li>
+</ul>
+<h4><span id="生命线lifeline">生命线（Lifeline）</span></h4><p>在时序图中表示为从对象图标向下延伸的一条虚线，表示对象存在的时间。</p>
+<h4><span id="控制焦点focus-of-control">控制焦点（Focus of Control）</span></h4><p>又称为激活期，表示时间段的符号，在这个时间段内对象将执行相应的操作。它可以被理解成C语言语义中一对花括号{ }中的内容；用小矩形表示。</p>
+<h4><span id="消息message">消息（Message）</span></h4><ul>
+<li>同步消息（Synchronous Message）:消息的发送者把控制传递给消息的接收者，然后停止活动，等待消息的接收者放弃或者返回控制。用来表示同步的意义；</li>
+<li>异步消息（Asynchronous Message）:消息发送者通过消息把信号传递给消息的接收者，然后继续自己的活动，不等待接受者返回消息或者控制。异步消息的接收者和发送者是并发工作的。</li>
+<li>返回消息（Return Message）:表示从过程调用返回。</li>
+</ul>
+<h4><span id="自关联消息">自关联消息</span></h4><p>表示方法的自身调用或者一个对象内的一个方法调用另外一个方法。</p>
+<h3><span id="组合片段">组合片段</span></h3><p>组合片段用来解决交互执行的条件和方式，它允许在序列图中直接表示逻辑组件，用于通过指定条件或子进程的应用区域，为任何生命线的任何部分定义特殊条件和子进程。</p>
+<h4><span id="抉择alt">抉择（Alt）</span></h4><p>抉择在任何场合下只发生一个序列。 可以在每个片段中设置一个临界来指示该片段可以运行的条件。else 的临界指示其他任何临界都不为 True 时应运行的片段。如果所有临界都为 False 并且没有 else，则不执行任何片段。</p>
+<p><img src="http://image.woshipm.com/wp-files/2017/03/W2K7C5yR1D45SVvZXY18.png" alt></p>
+<h4><span id="选项opt">选项（Opt）</span></h4><p>包含一个可能发生或不发生的序列</p>
+<p><img src="http://image.woshipm.com/wp-files/2017/03/E59nJupftrA2PQVJNAVG.png" alt></p>
+<h4><span id="循环loop">循环（Loop）</span></h4><p>片段重复一定次数，可以在临界中指示片段重复的条件。</p>
+<p><img src="http://image.woshipm.com/wp-files/2017/03/8RrbcwlfkOWs6kcsG47A.png" alt></p>
+<h4><span id="并行par">并行（Par）</span></h4><p><img src="http://image.woshipm.com/wp-files/2017/03/7wl54XDbyKX4A6NCU2Ok.png" alt></p>
+<p>exp:</p>
+<p><img src="//0wxzg0.github.io/2021/06/23/软工复习2/ssd1.png" alt></p>
+<p><img src="//0wxzg0.github.io/2021/06/23/软工复习2/ssd2.png" alt></p>
+<h2><span id="state-machine-diagram-状态机图">State Machine Diagram 状态机图</span></h2><p><a href="https://www.jianshu.com/p/d16084323a56" target="_blank" rel="noopener">参考文</a></p>
+<p>状态机图是一种行为，它指定对象在其生命周期中响应事件所经历的状态序列。状态机用于指定必须响应异步刺激或其当前行为取决于其过去的对象的行为。状态机用于模拟对象，用例甚至整个系统的行为，尤其是反应系统，它们必须响应来自系统外部的参与者的信号。</p>
+<p>状态机主要由状态、转换、事件、动作和活动5部分组成。</p>
+<ul>
+<li>1）状态表示对象的生命周期中的一种条件或情况。</li>
+<li>2）转换表示两种状态间的一种关系。</li>
+<li>3）事件表示在某一时间与空间下所发生的有意义的事情。</li>
+<li>4）动作表示一个可执行的原子操作，是UML能够表达的最小计算单元</li>
+<li>5）活动表示状态机中的非原子执行，一般由一系列动作组成。</li>
+</ul>
+<h3><span id="复合状态">复合状态</span></h3><p>简单状态是没有子结构的状态。复合状态可以进一步细分为子状态（在状态内或单独的图中）。具有子状态（嵌套状态）的状态称为复合状态。</p>
+<p>子状态可以嵌套到任何级别。</p>
+<p>嵌套状态机可以具有至多一个初始状态和一个最终状态。</p>
+<p>通过显示某些状态仅在特定上下文（封闭状态）内可能，子状态用于简化复杂的平面状态机。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/9661985-18443524783e10fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/697/format/webp" alt></p>
+<h3><span id="正交状态-orthogonal-state">正交状态 (Orthogonal State)</span></h3><p>甲复合状态具有两个或更多个区域被称为正交。与复合状态不同，子机状态旨在对状态进行分组，因此您可以重用它们。正交状态分为由虚线分隔的两个或更多个区域：</p>
+<p>每个区域的一个状态在任何时间点始终是活动的，即同时的基板</p>
+<p>进入：转换到正交状态的边界激活所有区域的初始状态</p>
+<p>退出：必须在所有区域达到最终状态才能触发完成事件</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/9661985-a3f8519c401493ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/745/format/webp" alt></p>
+<p><a href="https://upload-images.jianshu.io/upload_images/9661985-2efce1b530cec9c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/427/format/webp" target="_blank" rel="noopener">例：人生</a></p>
+<h2><span id="extending-and-integrating-requirements-models-扩展和集成需求模型">Extending and Integrating Requirements Models 扩展和集成需求模型</span></h2><p>Use cases 用例</p>
+<ul>
+<li>Use case diagram 用例图<ul>
+<li>Use case description 用例描述</li>
+<li>Activity diagram 活动图</li>
+<li>System sequence diagram (SSD) 系统时序图</li>
+</ul>
+</li>
+</ul>
+<p>Domain Classes 领域类</p>
+<ul>
+<li>Domain model class diagram 领域模型类图<ul>
+<li>State machine diagram 状态机图</li>
+</ul>
+</li>
+</ul>
+<h1><span id="7-class-diagram">7 Class Diagram</span></h1><h2><span id="class-diagram-类图">Class Diagram 类图</span></h2><p>在UML类图中，常见的有以下几种关系: 泛化（Generalization）,  实现（Realization），关联（Association)，聚合（Aggregation），组合(Composition)，依赖(Dependency)</p>
+<h3><span id="泛化generalization">泛化（Generalization）</span></h3><p>泛化关系：是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：老虎是动物的一种，即有老虎的特性也有动物的共性。</p>
+<p>箭头指向：带三角箭头的实线，箭头指向父类</p>
+<p><img src="https://images2017.cnblogs.com/blog/1134451/201708/1134451-20170812123014413-2064534630.png" alt></p>
+<h3><span id="实现realization">实现（Realization）</span></h3><p>实现关系：是一种类与接口的关系，表示类是接口所有特征和行为的实现.</p>
+<p>箭头指向：带三角箭头的虚线，箭头指向接口</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_47.gif" alt></p>
+<h3><span id="关联association">关联（Association)</span></h3><p>关联关系：是一种拥有的关系，它使一个类知道另一个类的属性和方法；如：老师与学生，丈夫与妻子关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。</p>
+<p>代码体现：成员变量</p>
+<p>箭头及指向：带普通箭头的实心线，指向被拥有者</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_41.gif" alt></p>
+<h3><span id="聚合aggregation">聚合（Aggregation）</span></h3><p>聚合关系：是整体与部分的关系，且部分可以离开整体而单独存在。如车和轮胎是整体和部分的关系，轮胎离开车仍然可以存在。</p>
+<p>聚合关系是关联关系的一种，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。</p>
+<p>代码体现：成员变量</p>
+<p>箭头及指向：带空心菱形的实心线，菱形指向整体</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_681.gif" alt></p>
+<h3><span id="组合composition">组合(Composition)</span></h3><p>组合关系：是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。</p>
+<p>组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期。</p>
+<p>代码体现：成员变量</p>
+<p>箭头及指向：带实心菱形的实线，菱形指向整体</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_278.gif" alt></p>
+<h3><span id="依赖dependency">依赖(Dependency)</span></h3><p>依赖关系：是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.</p>
+<p>代码表现：局部变量、方法的参数或者对静态方法的调用</p>
+<p>箭头及指向：带箭头的虚线，指向被使用者</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20120201/20120201092741_129.gif" alt></p>
+<h1><span id="8-architecture-design">8 Architecture Design</span></h1><h2><span id="design-activities-设计活动">Design Activities 设计活动</span></h2><p>environment 环境</p>
+<ul>
+<li>The environment is all of the technology required to support the software application 环境是支持软件应用程序所需的所有技术<ul>
+<li>Servers, Desktop computers 服务器、台式电脑</li>
+<li>Mobile devices, Operating systems 移动设备、操作系统</li>
+<li>Communication capabilities, Input and output capabilities 通信能力、输入输出能力</li>
+</ul>
+</li>
+</ul>
+<p>application architecture and software 应用程序架构和软件</p>
+<ul>
+<li>Partition system into subsystems 将系统划分为子系统</li>
+<li>Define software architecture 定义软件架构<ul>
+<li>Three layer or model-view-controller 三层或模型-视图-控制器</li>
+</ul>
+</li>
+<li>Detailed design of each use case 每个用例的详细设计<ul>
+<li>Design class diagrams 设计类图</li>
+<li>Sequence diagrams 序列图</li>
+<li>State machine diagrams 状态机图</li>
+</ul>
+</li>
+</ul>
+<p>user interfaces 用户界面</p>
+<ul>
+<li>Dialog design begins with requirements 对话设计从需求开始<ul>
+<li>Use case flow of activities 用例活动流程</li>
+<li>System sequenced diagram 系统时序图</li>
+</ul>
+</li>
+<li>Design adds in screen layout, look and feel, navigation, user experience 设计增加了屏幕布局、外观和感觉、导航、用户体验</li>
+<li>Now we require interface design for many different environment and devices 现在我们需要针对许多不同的环境和设备进行界面设计<ul>
+<li>Smart phone</li>
+<li>Notebooks, tablets, iPads</li>
+</ul>
+</li>
+</ul>
+<p>system interfaces 系统接口</p>
+<ul>
+<li>Information system interacts with many other systems, internal and external 信息系统与许多其他系统交互，内部和外部<ul>
+<li>Much more integration now 现在更多的集成</li>
+</ul>
+</li>
+<li>System interfaces connect with other systems in many different ways 系统接口以多种不同方式与其他系统连接<ul>
+<li>Save data another system uses 保存另一个系统使用的数据</li>
+<li>Read data another system saved 读取另一个系统保存的数据</li>
+<li>Real time request for information 实时信息请求</li>
+<li>Software services 软件服务</li>
+</ul>
+</li>
+</ul>
+<p>database 数据库</p>
+<ul>
+<li>Starting with the domain model class diagram (or ERD) 从域模型类图开始</li>
+<li>Choose database structure 选择数据库结构<ul>
+<li>Usually relational database 通常是关系数据库</li>
+<li>Could be ODBMS framework 可能是ODBMS框架</li>
+</ul>
+</li>
+<li>Design architecture (distributed, etc.) 设计架构（分布式等</li>
+<li>Design database schema 设计数据库架构<ul>
+<li>Tables and columns in relational 关系中的表和列</li>
+</ul>
+</li>
+<li>Design referential integrity constraints 设计参照完整性约束<ul>
+<li>Foreign key references 外键引用</li>
+</ul>
+</li>
+</ul>
+<p>security and system controls 安全和系统控制</p>
+<ul>
+<li>Protect the organization’s assets 保护组织的资产</li>
+<li>Becomes crucial in Internet and wireless 在互联网和无线领域变得至关重要</li>
+<li>User interface controls 用户界面控件</li>
+<li>Application controls 应用控制</li>
+<li>Database controls 数据库控件</li>
+<li>Network controls 网络控制</li>
+</ul>
+<h1><span id="9-design-classes">9 Design Classes</span></h1><h2><span id="component-diagram-for-architectural-design-组件图">Component Diagram for Architectural Design 组件图</span></h2><p>组件图即是用来描述组件与组件之间关系的一种UML图。组件图在宏观层面上显示了构成系统某一个特定方面的实现结构。</p>
+<p>组件图中主要包含三种元素，即组件、接口和关系。</p>
+<p>组件图通过这些元素描述了系统的各个组件及之间的依赖关系，还有组件的接口及调用关系。此外，组件图还可以使用包来进行组织，使用注解与约束来进行解释和限定。</p>
+<p>组件图在面向对象设计过程中起着非常重要的作用：它明确了系统设计，降低了沟通成本，而且按照面向对象方法进行设计的系统和子系统通常保证了低耦合度，提高了可重用性。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210743838-151551384.png" alt></p>
+<h3><span id="组件">组件</span></h3><p>组件，是系统设计的一个模块化部分，它隐藏了内部的实现，对外提供了一组接口。</p>
+<p>组件是一个封装完好的物理实现单元，它具有自己的身份标示和定义明确的接口。并且由于它对接口的实现过程与外部元素独立，所以组件具有可替换性。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210813112-802696148.png" alt></p>
+<h3><span id="接口">接口</span></h3><p>对于一个组件而言，它有两类接口，提供接口与需求接口。</p>
+<ul>
+<li>a.提供接口：又被称为导出接口或供给接口，是组件为其他组件提供服务的操作的集合。</li>
+<li>b.需求接口：又被称为引入接口，是组件向其他组件请求相应服务时要遵循的接口。</li>
+</ul>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210856165-796189279.png" alt></p>
+<h3><span id="端口">端口</span></h3><p>端口（port）是一个被封装的组件的对外窗口。在封装的组件中，所有出入组件的交互都要通过端口。组件对外可见的行为恰好是它端口的综合。此外，端口是有标识的。别的组件可以通过一个特定端口与另一个组件通信。</p>
+<p>在实现时，组件的内部组件通过特定的外部端口来与外界交互，因此，组件的每个部件都独立与其他部件的需求。端口允许把组件的接口划分为离散的并且可以独立使用的几部分。端口提供的封装性和独立性更大程度上保证了组件的封装性和可替换性。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210906847-1199067207.png" alt></p>
+<h3><span id="组件的内部结构">组件的内部结构</span></h3><p>在UML 2规范中，组件允许通过嵌套结构来表现组件的内部结构。</p>
+<p>子组件之间通过接口建立关系。图中组件边缘的小矩形被称为端口，端口可以理解为组件的入口与出口，组件通过端口与外部元素相互协作。端口上可以添加提供接口或需求接口来使组件得以扩展。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208210916284-972240484.png" alt></p>
+<p>例子：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1130413/201902/1130413-20190208211100644-678863341.png" alt></p>
+<h2><span id="crc-cards">CRC cards</span></h2><p>CRC卡是一个标准索引卡集合，包括三个部分：类名、类的职责、类的协作关系，每一张卡片表示一个类。</p>
+<ul>
+<li>类：代表一系列对象的集合，这些对象是对系统设计的抽象建模，可以是一个人、一件物品等等，类名写在整个CRC卡的最上方。</li>
+<li>职责：包括这个类对自身信息的了解，以及这些信息将如何运用。诸如，一个人，他知道他的电话号码、地址、性别等属性，并且他知道他可以说话、行走的行为能力。这个部分在CRC卡的左边。</li>
+<li>协作：指代另一个类，我们通过这个类获取我们想要的信息或者相关操作。这个部分在CRC卡的右边。</li>
+</ul>
+<p><img src="https://images.cnblogs.com/cnblogs_com/gnuhpc/201201/20120113131949320.png" alt></p>
+<p>例：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-53cfe3b28ce0dd922561737cbc69284b_720w.jpg" alt></p>
+<h1><span id="10-design-layers">10 Design Layers</span></h1><h2><span id="use-case-realization-用例实现">Use Case Realization 用例实现</span></h2><h2><span id="three-layer-design-三层设计">Three Layer Design 三层设计</span></h2><ul>
+<li><p>View Layer Class Responsibilities 视图层类职责</p>
+<ul>
+<li>Display electronic forms and reports. 显示电子表格和报告</li>
+<li>Capture such input events as clicks, rollovers, and key entries. 捕获诸如点击、翻转和键输入等输入事件</li>
+<li>Display data fields. 显示数据字段</li>
+<li>Accept input data. 接受输入数据</li>
+<li>Edit and validate input data. 编辑和验证输入数据</li>
+<li>Forward input data to the domain layer classes. 将输入数据转发到域层类</li>
+<li>Start and shut down the system. 启动和关闭系统</li>
+</ul>
+</li>
+<li><p>Domain Layer Class Responsibilities 领域层类职责</p>
+<ul>
+<li>Create problem domain (persistent) classes. 创建问题域（持久）类</li>
+<li>Process all business rules with appropriate logic. 使用适当的逻辑处理所有业务规则</li>
+<li>Prepare persistent classes for storage to the database.  准备用于存储到数据库的持久类</li>
+</ul>
+</li>
+<li><p>Data Access Layer Class Responsibilities 数据访问层类职责</p>
+<ul>
+<li>Establish and maintain connections to the database. 建立和维护与数据库的连接</li>
+<li>Contain all SQL statements. 包含所有SQL语句</li>
+<li>Process result sets (the results of SQL executions) into appropriate domain objects. 将结果集（SQL 执行的结果）处理为适当的域对象</li>
+<li>Disconnect gracefully from the database. 从数据库优雅地断开连接</li>
+</ul>
+</li>
+</ul>
+<h1><span id="11-几种设计模式">11 几种设计模式</span></h1><ul>
+<li>Factory Pattern 工厂模式<ul>
+<li>Simple Factory 简单工厂模式</li>
+<li>Factory Method 工厂方法模式</li>
+<li>Abstract Factory 抽象工厂模式</li>
+</ul>
+</li>
+<li>Singleton Pattern 单例模式</li>
+<li>Adapter Pattern 适配器模式</li>
+<li>Proxy Pattern 代理模式</li>
+</ul>
+<p><a href="https://www.jianshu.com/p/6e5eda3a51af" target="_blank" rel="noopener">参考</a></p>
+<h1><span id="12-ui-design-and-control-security">12 UI Design And Control Security</span></h1><h2><span id="interfaces-界面">Interfaces 界面</span></h2><ul>
+<li>User Interface – inputs and outputs that directly involve a human user/actor 用户界面：直接涉及人类用户/演员的输入和输出<ul>
+<li>A dialog goes on between actor and system 演员和系统之间进行对话</li>
+</ul>
+</li>
+<li>System Interface – the inputs and outputs that require minimal human intervention 系统接口：需要最少人工干预的输入和输出<ul>
+<li>Inputs captured automatically 自动捕获的输入</li>
+<li>Outputs direct to other systems 直接输出到其他系统</li>
+<li>Printed and distributed outputs (statements, reports) 印刷和分发的输出（报表、报告）</li>
+</ul>
+</li>
+</ul>
+<h2><span id="metaphors-of-human-computer-interaction-人机交互的隐喻">Metaphors of Human Computer Interaction 人机交互的隐喻</span></h2><ul>
+<li>Direct manipulation metaphor 直接操纵比喻<ul>
+<li>metaphor in which objects on a display are manipulated to look like physical objects (pictures) or graphic symbols that represent them (icons) 隐喻，显示器上的对象被操纵成看起来像物理对象（图片）或代表它们的图形符号（图标）</li>
+</ul>
+</li>
+<li>Desktop metaphor 桌面比喻<ul>
+<li>metaphor in which the visual display is organized into distinct regions, with a large empty workspace in the middle and a collection of tool icons around the perimeter 比喻将视觉显示组织成不同的区域，中间有一个大的空白工作区，周边有一组工具图标</li>
+</ul>
+</li>
+<li>Document metaphor 文档隐喻<ul>
+<li>metaphor in which data is visually represented as paper pages or forms 将数据可视化表示为纸页或表格的隐喻</li>
+</ul>
+</li>
+<li>Dialog metaphor 对话比喻<ul>
+<li>metaphor in which user and computer accomplish a task by engaging in a conversation or dialog via text, voice, or tools such as labeled buttons 比喻用户和计算机通过文本、语音或工具（如标记按钮）进行对话或对话来完成任务</li>
+</ul>
+</li>
+</ul>
+<h2><span id="system-inputs">System Inputs</span></h2><ul>
+<li>Primary Objective is Error Free Input 主要目标是无错误输入<ul>
+<li>Use electronic devices wherever possible 尽可能使用电子设备</li>
+<li>Avoid human involvement as much as possible 尽量避免人为参与</li>
+<li>If information is already available in electronic form, use it instead of re-entering information 如果信息已经以电子形式提供，请使用它而不是重新输入信息</li>
+<li>Validate and correct information at time and location entered 在输入的时间和地点验证和更正信息</li>
+</ul>
+</li>
+<li>Device Examples 设备示例<ul>
+<li>Magnetic card strip readers, bar code readers, optical character recognition, radio frequency ID tags (RFID), touch screen, electronic pens, digitizers, speech recognition 磁卡条阅读器、条码阅读器、光学字符识别、射频识别标签（RFID）、触摸屏、电子笔、数字化仪、语音识别</li>
+</ul>
+</li>
+</ul>
+<h2><span id="system-outputs">System Outputs</span></h2><ul>
+<li>Detailed reports – reports that contain specific information on business transactions 详细报告：包含有关业务交易的特定信息的报告</li>
+<li>Summary reports – reports that summarize detail or recap periodic activity 总结报告：总结细节或回顾定期活动的报告</li>
+<li>Exception reports – reports that provide details or summary information about transactions or operating results that fall outside a predefined normal range of values 异常报告：提供有关超出预定义正常值范围的交易或运营结果的详细信息或摘要信息的报告</li>
+<li>Executive reports – reports used by high level managers to assess overall organizational health and performance 执行报告：高层管理人员用来评估整体组织健康和绩效的报告</li>
+<li>Internal outputs – reports or other outputs produced for use within the organization 内部输出：为组织内部使用而制作的报告或其他输出<ul>
+<li>Types of internal reports apply here 内部报告的类型在此适用</li>
+</ul>
+</li>
+<li>External outputs – reports or other outputs produced for use by people outside the organization 外部输出：为组织外部人员使用而制作的报告或其他输出<ul>
+<li>Statements, notices, stockholder reports 声明、通知、股东报告</li>
+<li>Higher quality, color, reflect image of organization 更高的质量、颜色、反映组织的形象</li>
+</ul>
+</li>
+<li>Turnaround documents – external outputs that includes one or more parts intended to be returned with new data or information 周转文件：外部输出，包括一个或多个旨在返回新数据或信息的部件<ul>
+<li>Bills 账单</li>
+</ul>
+</li>
+</ul>
+<h2><span id="data-security">Data Security</span></h2><ul>
+<li>Data and files themselves must be secure 数据和文件本身必须是安全的</li>
+<li>Encryption – primary security method 加密：主要的安全方法<ul>
+<li>Altering data so unauthorized users cannot view 更改数据，使未经授权的用户无法查看</li>
+</ul>
+</li>
+<li>Decryption 译码<ul>
+<li>Altering encrypted data back to its original state 将加密数据改回其原始状态</li>
+</ul>
+</li>
+<li>Symmetric key – same key encrypts and decrypts 对称密钥：相同的密钥加密和解密</li>
+<li>Asymmetric key – different key decrypts 非对称密钥：不同的密钥解密</li>
+<li>Public key – public encrypts; private decrypts 公钥：公开加密；私人解密</li>
+</ul>
+<h1><span id="13-implement">13 Implement</span></h1><h2><span id="order-of-implementation-实施顺序">Order of Implementation 实施顺序</span></h2><ul>
+<li>Input, process, output (IPO) development order 输入、处理、输出 (IPO) 开发订单<ul>
+<li>Based on data flow through system 基于数据流经系统</li>
+<li>Simplifies testing 简化测试</li>
+<li>User interfaces developed early to reduce change 早期开发用户界面以减少更改</li>
+<li>Disadvantage is late implementation of outputs 缺点是产出实施晚</li>
+</ul>
+</li>
+<li>Structured design – IPO order based on system flowchart and structure chart 结构化设计：基于系统流程图和结构图的IPO订单</li>
+<li>OO design – IPO order in package diagrams 面向对象设计：包装图中的 IPO 顺序</li>
+<li>Top-down and bottom-up order from traditional structured design and structured programming 来自传统结构化设计和结构化编程的自上而下和自下而上的顺序</li>
+<li>Top-down begins with module at top of structure chart 自上而下从结构图顶部的模块开始<ul>
+<li>Always a working version of program 始终是程序的工作版本</li>
+<li>Requires three or more iterations to complete 需要三个或更多个迭代才能完成</li>
+</ul>
+</li>
+<li>Bottom-up begins with modules at lowest level of structure chart 自下而上从结构图最低层的模块开始<ul>
+<li>Many programmers can begin immediately 许多程序员可以立即开始</li>
+<li>Requires driver programs to test 需要驱动程序进行测试</li>
+</ul>
+</li>
+</ul>
+<h1><span id="14-软件测试">14 软件测试</span></h1><p>【略】</p>
+<h1><span id="15-agile">15 Agile</span></h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://0wxzg0.github.io/2021/06/23/软工复习2/" data-id="ckq8fbjqf0000k4vx57nclvjr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学校/">学校</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/22/软工复习1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">软工复习1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/お笑い/">お笑い</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学校/">学校</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/废纸篓/">废纸篓</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学建模/">数学建模</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/汇编/">汇编</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绘画/">绘画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译原理/">编译原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 12px;">C++</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/お笑い/" style="font-size: 10px;">お笑い</a> <a href="/tags/学校/" style="font-size: 20px;">学校</a> <a href="/tags/废纸篓/" style="font-size: 18px;">废纸篓</a> <a href="/tags/数学建模/" style="font-size: 10px;">数学建模</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/日常/" style="font-size: 14px;">日常</a> <a href="/tags/汇编/" style="font-size: 10px;">汇编</a> <a href="/tags/游戏/" style="font-size: 16px;">游戏</a> <a href="/tags/绘画/" style="font-size: 12px;">绘画</a> <a href="/tags/编译原理/" style="font-size: 10px;">编译原理</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/23/软工复习2/">软工复习2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/22/软工复习1/">软工复习1</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/男友意外怀孕该怎么办/">男友意外怀孕该怎么办</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/流亡/">流亡</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/03/婚礼/">婚礼</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 0wxzg0<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
